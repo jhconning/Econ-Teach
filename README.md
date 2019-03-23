@@ -2,7 +2,7 @@
 
 A repository for placing jupyter notebooks that I may have used for teaching economics at Hunter College. 
 
-![](rent-diagram =250x250)
+![](rent-diagram.png =250x250)
 
 These Jupyter Notebooks vary in quality from crude to more polished. I've organized them loosely in two folders
 

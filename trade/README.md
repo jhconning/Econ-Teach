@@ -1,9 +1,13 @@
-This folder contains a collection of [jupyter notebooks](https://jupyter.org/) that build and describe a number of the staple models of international trade.
+# Jupyter Notebooks for Trade Models
 
-These can be simply viewed (just click on links above). If you plan to run these notebooks interactively, 
-which I recommend so that you can see how many of the graphs change 
-as you change the value of model parameters with sliders from the Microsoft Azure notebooks [mirror of this repository](https://notebooks.azure.com/jhconning/projects/econ-teach/tree/trade) 
-cloud server or on a jupyter notebook server running on your own machine do be aware that some of the code works only if your
+Here is a collection of [jupyter notebooks](https://jupyter.org/) that build and describe a few key models taught in international trade courses. Some notebooks are relatively complete and polished, others are more like first drafts, but all try to explain and interactively animate key graphical presentations of these classic trade models using the interactive HTML widgets such as sliders (using the [ipywidgets](https://github.com/jupyter-widgets/ipywidgets) library). 
+
+![lerner-diagram](lerner-diagram.png)
+
+These notebooks may be simply viewed (just click on links above). If you plan to run these notebooks interactively 
+(which I recommend so that you can change the value of model parameters with sliders and see how graphs change) using 
+the Microsoft Azure notebooks [mirror of this repository](https://notebooks.azure.com/jhconning/projects/econ-teach/tree/trade) 
+cloud server or a jupyter notebook server running on your own machine do be aware that some of the code works only if your
 python installation is python 3.5 or above.  
 
 Here are brief instructions for running notebooks on the Microsoft Azure notebook cloud server:

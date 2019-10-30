@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
 """
-Code for specific factors model
+Code for:
+ -  specific factors model SFM.ipynb
+ -  Tariff_in_general_equilibrium.ipynb
+
 Created on Mon Oct 3 2019 16 08:57:01 2019
 
 @author: jconning
@@ -20,7 +23,6 @@ plt.rcParams["figure.figsize"] = [7,7]
 plt.rcParams["axes.spines.right"] = True
 plt.rcParams["axes.spines.top"] = False
 plt.rcParams["font.size"] = 18
-plt.rcParams['figure.figsize'] = (10, 6)
 plt.rcParams['axes.grid']=True
 
 Tbar = 100       # Fixed specific land in ag. 
@@ -61,7 +63,7 @@ def ppf(Tbar=Tbar, Kbar=Kbar, Lbar=Lbar):
     plt.xlabel(r'$Q_a$')
     plt.ylabel(r'$Q_m$')
     plt.plot(Qa, Qm)
-    plt.gca().set_aspect('equal');
+    plt.gca().set_aspect('equal')
 
 
 LDa = p * MPLa(La) *(La<Lbar)         # for Cobb-Douglas MPL can be written this way
@@ -78,9 +80,9 @@ def u(x,y):
     '''Utility function'''
     return x*y
 
-def XD(p, Lbar = Lbar):
+def XD(p, Lbar = Lbar, Tbar=Tbar, Kbar=Kbar):
     '''Cobb-Douglas demand for goods given world prices (national income computed)'''
-    LAe, we = eqn(p)
+    LAe, we = eqn(p, Lbar, Tbar, Kbar)
     # gdp at world prices measured in manuf goods
     gdp = p*F(LAe, Tbar = Tbar) + G(Lbar -LAe, Kbar=Kbar)
     return (1/2)*gdp/p, (1/2)*gdp
@@ -171,3 +173,28 @@ def sfmplot2(p):
             plt.title(r'$\frac{P_a}{P_m} \downarrow  \rightarrow  \frac{w}{P_m} \downarrow, \frac{w}{P_a} \uparrow $'  );
     plt.show();
         
+
+## For the tariffs in general equilibrium
+
+def open_trade(p, t=0, dt=False):
+    ppf(100)
+    Ca = np.linspace(0,250,200)
+    pt = p*(1+t)
+    LAe, we = eqn(pt)
+    X, Y = F(LAe, Tbar = Tbar), G(Lbar -LAe)
+    wgdp = p*X + Y  # gdp at world prices
+    dgdp = pt*X + Y
+    plt.scatter(*XD(p,t), marker='o', label='Trade')
+    plt.scatter(X,Y, marker='o', label='Trade')
+    plt.plot([0,wgdp/p],[wgdp, 0])
+    ub = u(*XD(p,t))
+    plt.ylim(0,300)
+    plt.xlim(0,300)
+    plt.plot(Ca, indif(Ca, ub))
+    if dt:
+        plt.plot([0,dgdp/pt],[dgdp, 0], c='g')
+    plt.grid(False)
+    #plt.legend()
+    ax = plt.gca()
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['left'].set_position('zero')

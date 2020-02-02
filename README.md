@@ -6,11 +6,11 @@ A repository for placing jupyter notebooks that I may have used for teaching eco
 
 These Jupyter Notebooks vary in quality from crude to more polished. I've organized them loosely in two folders
 
-[intro](intro)  -- Eco 100 and Eco 200 Intro to micro
+[intro](notebooks/intro)  -- Eco 100 and Eco 200 Intro to micro
 
-[Trade](trade)  -- Eco 340 and Eco 740 Trade models
+[Trade](notebooks/trade)  -- Eco 340 and Eco 740 Trade models
 
-[micro](micro)  -- Eco 701 Micro Theory models
+[micro](notebooks/micro)  -- Eco 701 Micro Theory models
 
 
 Notebooks for other courses (housed at other repositories):

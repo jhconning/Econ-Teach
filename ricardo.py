@@ -16,8 +16,6 @@ plt.rcParams["axes.spines.right"] = False
 plt.rcParams["axes.spines.top"] = False
 plt.rcParams["font.size"] = 18
 
-
-
 # Some default parameters when none are supplied
 MPLX = 2
 MPLY = 1
@@ -43,9 +41,9 @@ def budget(px=1, py=1, I=100, show = False):
     #         r'   $\frac{P_X}{P_Y}=$'+'{:3.2f}'.format(px/py)+' Y/X',
     #         fontsize=12)
     if show: #use False for subplots
-        plt.show();
+        plt.show()
         
-def ppf(mplx=MPLX, mply=MPLY, lbar=LBAR, show = False, title='Home'):   
+def rppf(mplx=MPLX, mply=MPLY, lbar=LBAR, show = False, title='Home'):   
     '''Plot a linear PPF diagram 
        show == False delays plt.show() to allow other elements to be plotted first'''
     qy = mply*lbar - (mply/mplx) * QX
@@ -57,13 +55,13 @@ def ppf(mplx=MPLX, mply=MPLY, lbar=LBAR, show = False, title='Home'):
              r' $\frac{MPL_Y}{MPL_X}=\frac{P_X}{P_Y}=$'+'{:3.2f}'.format(mply/mplx)
              + ' Y/X', fontsize=14  )  
     if show: #use False for subplots
-        plt.show();
+        plt.show()
         
-def twoppf(mplx, mply, lbar, mplfx, mplfy, lbarf):
-    foreign = ppf
+def tworppf(mplx, mply, lbar, mplfx, mplfy, lbarf):
+    foreign = rppf
     plt.figure(1, figsize =(12,12))
     plt.subplot(121, aspect='equal')
-    ppf(mplx, mply, lbar, title='Home')
+    rppf(mplx, mply, lbar, title='Home')
     plt.subplot(122, aspect='equal')
     foreign(mplfx, mplfy, lbarf, title='Foreign')
     plt.ylabel('')
@@ -96,9 +94,9 @@ def openeq(mplx=MPLX, mply=MPLY, lbar=LBAR, pw=1):
     return qx, qy, cx, cy
        
 
-def openppf(mplx=MPLX, mply=MPLY, lbar=LBAR, pw=1, show = False, title='Home'):
-    '''Like ppf but also plots world price line and specialization'''
-    ppf(mplx, mply, lbar)
+def openrppf(mplx=MPLX, mply=MPLY, lbar=LBAR, pw=1, show = False, title='Home'):
+    '''Like rppf but also plots world price line and specialization'''
+    rppf(mplx, mply, lbar)
     qx, qy, cx, cy = openeq(mplx, mply, lbar, pw)
     plt.scatter(qx,qy)
     plt.title(title)
@@ -107,7 +105,7 @@ def openppf(mplx=MPLX, mply=MPLY, lbar=LBAR, pw=1, show = False, title='Home'):
     indif_plot(pw, I)
 
 
-def worldprice(mplx, mply, lbar, mplfx, mplfy, lbarf):
+def rworldprice(mplx, mply, lbar, mplfx, mplfy, lbarf):
     '''  World equilibrium price consistent with balanced trade
     By Walras' law we just need to find price at which excess demand in 
     one market is eliminated
@@ -121,21 +119,22 @@ def worldprice(mplx, mply, lbar, mplfx, mplfy, lbarf):
     return fsolve(xsdemand, guess)[0]
     
 
-def twopane(mplx=MPLX, mply=MPLY, lbar=LBAR, 
+def rtwopane(mplx=MPLX, mply=MPLY, lbar=LBAR, 
             mplfx=MPLY, mplfy=MPLX, lbarf=LBAR, p=1):
-    foreign = openppf
+    foreign = openrppf
     plt.figure(1, figsize =(12,12))
     plt.subplot(121, aspect='equal')
-    openppf(mplx, mply, lbar, p, title='Home')
+    openrppf(mplx, mply, lbar, p, title='Home')
     plt.subplot(122, aspect='equal')
     foreign(mplfx, mplfy, lbarf, p, title='Foreign')
     plt.ylabel('')
     
-def worldeq(mplx=MPLX, mply=MPLY, lbar=LBAR, 
+def rworldeq(mplx=MPLX, mply=MPLY, lbar=LBAR, 
             mplfx=MPLY, mplfy=MPLX, lbarf=LBAR):
     
-    pw = worldprice(mplx, mply, lbar, mplfx, mplfy, lbarf)
-    twopane(mplx, mply, lbar, mplfx, mplfy, lbarf, p=pw)
+    pw = rworldprice(mplx, mply, lbar, mplfx, mplfy, lbarf)
+    rtwopane(mplx, mply, lbar, mplfx, mplfy, lbarf, p=pw)
+    print(f'Equilibrium world price: {pw:3.2f} units of Y per X')
 
     
 
@@ -144,11 +143,11 @@ if __name__ == "__main__":
     budget()
     
     print('simple PPF')
-    ppf(mplx=2,mply=1,lbar=200)
+    rppf(mplx=2,mply=1,lbar=200)
     
     print('open economy PPF')
-    openppf(mplx=2,mply=1,lbar=200, pw=1)
+    openrppf(mplx=2,mply=1,lbar=200, pw=1)
     
     print('two country')
-    twopane(MPLX, MPLY, LBAR, 4*MPLX, 2*MPLY, LBAR, p=3/4)
+    rtwopane(MPLX, MPLY, LBAR, 4*MPLX, 2*MPLY, LBAR, p=3/4)
     

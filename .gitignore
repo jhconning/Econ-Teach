@@ -2,3 +2,7 @@
 #Ipython Notebook
 .ipynb_checkpoints
 *.pyc
+.vs/
+.vscode/
+
+

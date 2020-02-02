@@ -1,0 +1,8 @@
+voila==0.1.6
+ipywidgets
+scipy
+numpy
+matplotlib
+seaborn
+
+

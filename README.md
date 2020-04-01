@@ -19,6 +19,8 @@ These Jupyter Notebooks vary in quality from crude to more polished. I've organi
 
 - [micro](notebooks/micro)  -- Eco 701 Micro Theory models
 
+- [epidemic](notebooks/epidemic)  -- because economists are trying to learn epidemiology
+
 
 Notebooks for other courses (housed at other repositories):
 

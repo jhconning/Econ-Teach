@@ -1,4 +1,5 @@
 jupyter-book
+myst-parser
 ipywidgets
 scipy
 numpy

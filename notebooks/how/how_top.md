@@ -42,4 +42,4 @@ I've [setup a github action](https://jupyterbook.org/publish/gh-pages.html#autom
 
 
 
-[^1]: If setting up your own page, make sure you've enabled Github pages in the settings.
+[^1]: If setting up your own page, make sure you've enabled Github pages in the settings.  Also make sure that your version of the [book.yml](https://github.com/jhconning/Econ-Teach/blob/master/.github/workflows/book.yml) file points to the right branch (e.g. 'main' or 'master').

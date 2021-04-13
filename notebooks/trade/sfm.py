@@ -124,7 +124,29 @@ def sfmtrade(p):
     plt.gca().spines['bottom'].set_position('zero')
     plt.gca().spines['left'].set_position('zero')
 
-
+def sfmtrade3(p):
+    fig, ax =plt.subplots()
+    Ca = np.linspace(0,200,200)
+    LAe, we = eqn(p)
+    X, Y = F(LAe, Tbar = Tbar), G(Lbar -LAe)
+    gdp = p*X + Y
+    print(f'(QX, QY) = ({X:3.1f}, {Y:3.1f})')
+    print(f'(CX, CY) = ({XD(p)[0]:3.1f}, {XD(p)[1]:3.1f})')
+    ax.scatter(F(LAe, Tbar), G(Lbar-LAe, Tbar), label='Trade produce')
+    ax.scatter(*XD(p),label='Trade consume', marker='s')
+    ax.scatter(*XD(p_autarky()), marker='x', label='Autarky')
+    ax.plot([0,gdp/p],[gdp, 0])
+    ppf(100)
+    ub = u(*XD(p))
+    #plt.ylim(0,gdp)
+    #plt.xlim(0,gdp)
+    ax.set_xlim(0,300)
+    ax.set_ylim(0,300)
+    ax.plot(Ca, indif(Ca, ub))
+    ax.grid(False)
+    ax.legend()
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['left'].set_position('zero')
 
 
 

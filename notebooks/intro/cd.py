@@ -2,6 +2,12 @@
 import matplotlib.pyplot as plt
 from ipywidgets import interact, fixed
 import numpy as np
+plt.style.use('seaborn-whitegrid')
+from mpl_toolkits.mplot3d import *
+from matplotlib import cm
+from scipy.optimize import minimize
+
+
 
 
 plt.style.use('bmh')
@@ -21,6 +27,13 @@ def budgetc(c0,p,I):
 def u(c, a=ALPHA):
     '''Utility at c=(c[0], c[1])'''
     return (c[0]**a)*(c[1]**(1-a))
+
+def MU0(c, a=ALPHA):
+    '''MU of Cobb-Douglas'''
+    return  a*u(c,a)/c[0] 
+
+def MU1(c, a=ALPHA):
+    return  (1-a)*u(c,a)/c[1]
 
 def indif(c0, ubar, a=ALPHA):
     '''c1 as function of c0, implicitly defined by U(c0, c1) = ubar'''
@@ -52,6 +65,38 @@ def consume_plot(p, I, a=ALPHA):
     ax.set_ylabel('$c_1$', fontsize=16)
     ax.spines['right'].set_visible(False)
     ax.spines['top'].set_visible(False)
+
+def arb_plot(c0g, I, p):
+    cg = [c0g, I - c0g]
+    cmax = max(I, I/p)*1.1
+    c0 = np.linspace(0.1,cmax,num=100)
+    
+    '''Display characteristics of a guess along the constraint'''
+    fig, ax = plt.subplots(figsize=(9,9))
+    ax.plot(c0, budgetc(c0, p, I), lw=1)
+    ax.fill_between(c0, budgetc(c0, p, I), alpha = 0.2)
+    ax.plot(c0, indif(c0, u(cg)), lw=2.5)
+    ax.vlines(cg[0],0,cg[1], linestyles="dashed")
+    ax.hlines(cg[1],0,cg[0], linestyles="dashed")
+    ax.plot(cg[0],cg[1],'ob')
+    mu0pd, mu1pd = MU0(cg), MU1(cg)/p
+    if mu0pd > mu1pd:
+        inq = r'$>$'
+    elif mu0pd < mu1pd:
+        inq = r'$<$'
+    else:
+        inq =r'$=$'
+    ax.text(60, 120, r'$\frac{MU_0}{p_0}$'+inq+r'$\frac{MU_1}{p_1}$',fontsize=20)
+    utext = r'$({:5.1f}, {:5.1f}) \ \ U={:5.3f}$'.format(cg[0], cg[1], u(cg))
+    ax.text(60, 100, utext, fontsize=12)
+    ax.set_xlim(0, cmax)
+    ax.set_ylim(0, cmax)
+    ax.set_xlabel(r'$c_0$', fontsize=16)
+    ax.set_ylabel('$c_1$', fontsize=16)
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.set_title('The No-Arbitrage argument')
+    plt.show()
 
 
 #

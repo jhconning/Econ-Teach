@@ -1,0 +1,44 @@
+# Econ-Teach  https://github.com/jhconning/Econ-Teach
+# This is the Jupyterbook table of contents for the site
+
+- file: README
+
+- part: Intro Microeconomics
+  chapters:
+    - file: notebooks/intro/intro_top
+      sections:
+        - file: notebooks/intro/intro_geogebra
+
+- part: Trade
+  chapters:
+    - file: notebooks/trade/Ricardian_top
+      sections:
+        - file: notebooks/trade/Ricardian_Trade
+    - file: notebooks/trade/SFM_top
+      sections:
+        - file: notebooks/trade/SFM
+        - file: notebooks/trade/CRSTechnology
+    - file: notebooks/trade/Protection_top
+      sections:
+        - file: notebooks/trade/TariffPartial
+        - file: notebooks/trade/Tariff_in_general_equilibrium
+
+
+- part: Micro Theory
+  chapters:
+    - file: notebooks/micro/micro_top
+      sections:
+        - file: notebooks/micro/01_Constrained_Optimization
+
+- part: Development + PoliEc
+  chapters:
+    - file: notebooks/micro/micro_top
+      sections:
+        - file: notebooks/micro/01_Constrained_Optimization
+        
+
+- part: This Book
+  chapters:
+    - file: notebooks/how/how_top
+      
+        

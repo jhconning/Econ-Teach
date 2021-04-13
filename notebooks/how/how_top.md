@@ -35,7 +35,11 @@ If you have those files as well as other content in a folder labeled `Econ-Teach
 
 And jupyterbook will create a local copy of the website which you can view from a browser.  
 
-I've setup a github action so that any new push to the Github repository at [github.com/jhconning/Econ-Teach](https://github.com/jhconning/Econ-Teach) triggers a similar build on a virtual cloud machine that will then produce the jupyterbook site that will be rendered at [jhconning.github.io/Econ-Teach](https://jhconning.github.io/Econ-Teach).  There may be a few minutes delay between new builds and the changes showing up. 
+I've [setup a github action](https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions) so that any new push to the Github repository at [github.com/jhconning/Econ-Teach](https://github.com/jhconning/Econ-Teach) triggers a similar build on a virtual cloud machine that will then produce the jupyterbook site that will be rendered at [jhconning.github.io/Econ-Teach](https://jhconning.github.io/Econ-Teach).  There may be a few minutes delay between new builds and the changes showing up.[^1]
+
 
 ## MyST markdown
 
+
+
+[^1]: If setting up your own page, make sure you've enabled Github pages in the settings.

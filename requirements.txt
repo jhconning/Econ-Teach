@@ -1,5 +1,4 @@
 git+https://github.com/ExecutableBookProject/jupyter-book.git@master
-myst-parser
 numpy
 matplotlib
 ipywidgets

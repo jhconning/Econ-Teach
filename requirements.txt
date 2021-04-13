@@ -1,9 +1,9 @@
-voila==0.1.20
+jupyter-book
 ipywidgets
 scipy
 numpy
 matplotlib
 seaborn
-voila-reveal
+
 
 

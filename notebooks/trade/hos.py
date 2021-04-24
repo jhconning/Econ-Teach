@@ -29,10 +29,10 @@ alpha = 0.6   # A capital share
 beta = 0.4    # M capital share
 theta = 0.5    # A consumption share
 
-def F(K,L, alpha=alpha, beta=beta):
+def F(K,L, alpha=alpha):
     return K**alpha * L**(1-alpha)
 
-def G(K,L, alpha=alpha, beta=beta):
+def G(K,L, beta=beta):
     return K**beta * L**(1-beta)
 
 def U(Ca,Cm, theta=theta):
@@ -45,7 +45,7 @@ def kl(wr, kshare):
     return (kshare/(1-kshare))* wr
 
 def isoq(L, kshare, qbar):
-    return (qbar/(L**(1-kshare)))**(1/kshare)
+    return ( qbar/(L**(1-kshare)) )**(1/kshare)
 
 def klplot(KL):
     wr = np.linspace(0,10,100)
@@ -89,8 +89,8 @@ def lerner(p):
     plt.plot(ll, Kms*ll, ':')
     plt.plot(ll_, isoq(ll_,beta, QQ),'b')
     plt.plot(ll_, isoq(ll_,alpha, p*QQ))
-    plt.text(ll_[-1],isoq(ll_[-1],beta,QQ),f"Qm={QQ}")
-    plt.text(ll_[-1],isoq(ll_[-1],alpha,p*QQ),f"Qa=p*{QQ}")
+    plt.text(ll_[-1],isoq(ll_[-1],beta,QQ),f"Qm={QQ}", fontsize=14)
+    plt.text(ll_[-1],isoq(ll_[-1],alpha,p*QQ),f"Qa=p*{QQ}={p*QQ:0.1f}", fontsize=14)
     plt.plot(ll, I - wr*ll,'b:')
     plt.xlabel('L - labor')
     plt.ylabel('K - capital')
@@ -110,30 +110,31 @@ def ssplot(p):
     plt.ylim(0,6);
 
 def num_opt(alpha=alpha, beta=beta):
+    '''Numerically solve closed economy util max subject to PPF '''
     x0 = [50,50] # -- guess
     sol = minimize(obj, x0,args=(alpha,beta))
     Kae, Lae  = sol.x
     Qae, Qme = F(Kae,Lae, alpha), G(Kbar-Kae, Lbar-Lae, beta)
     return Qae, Qme
 
-def PPF(La, alpha=alpha, beta=beta):
-    '''Vary La and return F(Ka, La), G(K-Ka, L-La)'''
-    Delta = (alpha/beta)*(1-beta)/(1-alpha)
-    Ka = (Delta * La * Kbar) / (Lbar +(Delta-1)*La)
-    return F(Ka,La), G(Kbar-Ka, Lbar-La)
     
 def indif(Cm, theta , ubar):
     return (ubar/(Cm**(1-theta)))**(1/theta)
 
 def closed_plot(alpha=alpha, beta=beta):
-    Qa, Qm = PPF(ll, alpha, beta)
+    La = np.arange(0,Lbar)
+    Ka = edgeworth(La, Kbar, Lbar,alpha, beta)
+    Qa = F(Ka,La,alpha)
+    Qm = G(Kbar-Ka,Lbar-La,beta)
     Qae, Qme = num_opt(alpha, beta)
-    print(Qae, Qme)
-    plt.plot(Qm, Qa)
-    plt.plot(ll, indif(ll, theta, U(Qae,Qme)) )
-    plt.ylim(0,110)
-    plt.xlim(0,110)
-    plt.scatter(Qme, Qae);
+    print(f'(Qa, Qm) = ({Qae:0.1f}, {Qme:0.1f})')
+    fig, ax = plt.subplots()
+    ax.plot(Qm, Qa)
+    ax.plot(ll, indif(ll, theta, U(Qae,Qme)) )
+    ax.set_ylim(0,110)
+    ax.set_xlim(0,110)
+    ax.scatter(Qme, Qae)
+    ax.set_aspect('equal')
 
 def rybplot(p, Kbar=Kbar, Lbar=Lbar, alpha=alpha, beta=beta):
     """ Trade-style Edgeworth KL line intersections
@@ -181,42 +182,48 @@ def hos_eq(p, Kbar=Kbar, Lbar=Lbar):
 
 def edgeworth(L, Kbar=Kbar, Lbar=Lbar, alpha=alpha, beta=beta):
     """efficiency locus: """
-    a = (1-alpha)/alpha
-    b = (1-beta)/beta
-    return b*L*Kbar/(a*(Lbar-L)+b*L)
+    A = (beta*(1-alpha)) / (alpha*(1-beta) )
+    #return b*L*Kbar/(a*(Lbar-L)+b*L)
+    return (L*Kbar)/(A*(Lbar-L)+L)
 
 
-def edgeplot(LA, Kbar=Kbar, Lbar=Lbar,alpha=alpha,beta=beta):
+
+
+def edgeplot(LA, Kbar=Kbar, Lbar=Lbar, alpha=alpha, beta=beta):
     """Draw an edgeworth box
     
     arguments:
     LA -- labor allocated to ag, from which calculate QA(Ka(La),La) 
     """
-    KA = edgeworth(LA, Kbar, Lbar,alpha, beta)
+    KA = edgeworth(LA, Kbar, Lbar, alpha, beta)
     RTS = (alpha/(1-alpha))*(KA/LA)
-    QA = F(KA,LA,alpha)
-    QM = G(Kbar-KA,Lbar-LA,beta)
+    QA = F(KA, LA, alpha)
+    QM = G(Kbar-KA, Lbar-LA, beta)
     print("(LA,KA)=({:4.1f}, {:4.1f})  (QA, QM)=({:4.1f}, {:4.1f})  RTS={:4.1f}"
           .format(LA,KA,QA,QM,RTS))
     La = np.arange(1,Lbar)
     fig, ax = plt.subplots(figsize=(7,6))
     ax.set_xlim(0, Lbar)
     ax.set_ylim(0, Kbar)
-    ax.plot(La, edgeworth(La,Kbar,Lbar,alpha,beta),'k-')
+    ax.plot(La, edgeworth(La, Kbar, Lbar, alpha, beta),'k-')
     #ax.plot(La, La,'k--')
     ax.plot(La, isoq(La, alpha, QA))
-    ax.plot(La, Kbar-isoq(Lbar-La, beta, QM),'g-')
-    ax.plot(LA, KA,'ob')
-    ax.vlines(LA,0,KA, linestyles="dashed")
-    ax.hlines(KA,0,LA, linestyles="dashed")
+    ax.plot(La, Kbar - isoq(Lbar-La, beta, QM),'g-')
+    ax.plot(LA, KA, 'ob')
+    ax.vlines(LA, 0, KA, linestyles="dashed")
+    ax.hlines(KA, 0, LA, linestyles="dashed")
     ax.text(-6,-6,r'$O_A$',fontsize=16)
     ax.text(Lbar,Kbar,r'$O_M$',fontsize=16)
-    ax.set_xlabel(r'$L_A -- Labor$', fontsize=16)
-    ax.set_ylabel('$K_A - Capital$', fontsize=16)
+    ax.set_xlabel(r'$L_A - Labor$', fontsize=16)
+    ax.set_ylabel(r'$K_A - Capital$', fontsize=16)
     #plt.show()
     
-    
-def ppf(LA,Kbar=Kbar, Lbar=Lbar,alpha=alpha,beta=beta):
+def HOS(p, Kbar=Kbar, Lbar=Lbar, alpha=alpha, beta=beta):
+    LA, KA = hos_eq(p, Kbar=Kbar, Lbar=Lbar)
+    edgeplot(LA, Kbar=Kbar, Lbar=Lbar, alpha=alpha, beta=beta)
+
+
+def ppf(LA, Kbar=Kbar, Lbar=Lbar,alpha=alpha,beta=beta):
     """Draw a production possibility frontier
     
     arguments:
@@ -237,16 +244,16 @@ def ppf(LA,Kbar=Kbar, Lbar=Lbar,alpha=alpha,beta=beta):
     ax.plot(Qa, Qm,'k-')
     ax.set_xlabel(r'$Q_A$',fontsize=18)
     ax.set_ylabel(r'$Q_B$',fontsize=18)
-    plt.show()
+    
     
     
 def wreq(p,a=alpha, b=beta):
     B = ((1-a)/(1-b))*(a/(1-a))**a  * ((1-b)/b)**b
-    return B*p
+    return B*p**(1/(b-a))
 
 def ssline(a=alpha, b=beta):
-    p = np.linspace(0.1,10,100)
+    p = np.linspace(0.5,1.5,500)
     plt.title('The Stolper-Samuelson line')
     plt.xlabel(r'$p = \frac{P_a}{P_m}$', fontsize=18)
     plt.ylabel(r'$ \frac{w}{r}$', fontsize=18)
-    plt.plot(p,wreq(p, a, b));
+    plt.plot(p, wreq(p, a, b));

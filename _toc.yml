@@ -3,7 +3,6 @@ root: README
 parts:
 - caption: Intro Microeconomics
   chapters:
-  - file: notebooks/intro/intro_top
   - file: notebooks/intro/intro_geogebra
 - caption: Trade
   chapters:

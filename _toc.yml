@@ -1,44 +1,28 @@
-# Econ-Teach  https://github.com/jhconning/Econ-Teach
-# This is the Jupyterbook table of contents for the site
-
-- file: README
-
-- part: Intro Microeconomics
+format: jb-book
+root: README
+parts:
+- caption: Intro Microeconomics
   chapters:
-    - file: notebooks/intro/intro_top
-      sections:
-        - file: notebooks/intro/intro_geogebra
-
-- part: Trade
+  - file: notebooks/intro/intro_top
+  - file: notebooks/intro/intro_geogebra
+- caption: Trade
   chapters:
-    - file: notebooks/trade/Ricardian_top
-      sections:
-        - file: notebooks/trade/Ricardian_Trade
-    - file: notebooks/trade/SFM_top
-      sections:
-        - file: notebooks/trade/SFM
-        - file: notebooks/trade/CRSTechnology
-    - file: notebooks/trade/Protection_top
-      sections:
-        - file: notebooks/trade/TariffPartial
-        - file: notebooks/trade/Tariff_in_general_equilibrium
-
-
-- part: Micro Theory
+  - file: notebooks/trade/Ricardian_top
+  - file: notebooks/trade/Ricardian_Trade
+  - file: notebooks/trade/SFM_top
+  - file: notebooks/trade/SFM
+  - file: notebooks/trade/HOS
+  - file: notebooks/trade/CRSTechnology
+  - file: notebooks/trade/Protection_top
+  - file: notebooks/trade/TariffPartial
+  - file: notebooks/trade/Tariff_in_general_equilibrium
+- caption: Micro Theory
   chapters:
-    - file: notebooks/micro/micro_top
-      sections:
-        - file: notebooks/micro/01_Constrained_Optimization
-
-- part: Development + PoliEc
+  - file: notebooks/micro/01_Constrained_Optimization
+#- caption: Development and PoliEc
+#  chapters:
+#  - file: notebooks/micro/micro_top
+#  - file: notebooks/micro/01_Constrained_Optimization
+- caption: This Book
   chapters:
-    - file: notebooks/micro/micro_top
-      sections:
-        - file: notebooks/micro/01_Constrained_Optimization
-        
-
-- part: This Book
-  chapters:
-    - file: notebooks/how/how_top
-      
-        
+  - file: notebooks/how/how_top

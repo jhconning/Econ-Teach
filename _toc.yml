@@ -17,7 +17,6 @@
     - file: notebooks/trade/SFM_top
       sections:
         - file: notebooks/trade/SFM
-        - file: notebooks/trade/HOS
         - file: notebooks/trade/CRSTechnology
     - file: notebooks/trade/Protection_top
       sections:

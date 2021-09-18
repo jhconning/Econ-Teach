@@ -28,7 +28,7 @@ These Jupyter Notebooks vary in quality from crude to more polished. I've organi
 
 Notebooks for other courses (housed at other repositories):
 
-- [PhD Development seminar](https://dev-ii-seminar.readthedocs.io/en/latest/index.html)  -- PhD development seminar at The Graduate Center
+- [PhD Development seminar](https://jhconning.github.io/DevII/)  -- PhD development seminar at The Graduate Center
 
 - [Land property rights](https://github.com/jhconning/land_uct_2019)  -- for a short course on political economy of land in Cape Town 2019
 

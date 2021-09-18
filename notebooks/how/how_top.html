@@ -97,11 +97,6 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro/intro_top.html">
-   Introduction to Economics
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../intro/intro_geogebra.html">
    Introduction to Microeconomics (Geogebra)
   </a>
@@ -294,14 +289,13 @@
                 
   <div class="section" id="this-jupyterbook">
 <h1><a class="toc-backref" href="#id3">This JupyterBook</a><a class="headerlink" href="#this-jupyterbook" title="Permalink to this headline">¶</a></h1>
-<p>This Econ-Teach site was made using <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a> which is built on top of the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> documentation system.</p>
-<p>The content was written using a combination of markdown files (with <code class="docutils literal notranslate"><span class="pre">.md</span></code> extensions) and jupyter notebooks (with <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extensions) with markdown and python code cells.</p>
+<p>This Econ-Teach site was made using <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a> which leverages the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> documentation system.  All content was written using jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension) which combine markdown text and python code cells and/or with plain markdown files.</p>
 <p>Many of the graphs in the book are interactive because they are either:</p>
 <ul class="simple">
-<li><p>Geogebra Apps (javascript apps that will run in any browser)</p></li>
-<li><p>Python interactive widgets.  These may appear as static images on the website but can usually be made interactive by running the underlying jupyter notebook by clicking the Binder or Google Colab button to launch a server.</p></li>
+<li><p>Geogebra Apps (javascript apps that will run immediately in any modern browser).</p></li>
+<li><p>Python interactive widgets (ipywidgets).  These may appear as static images on the website but can be made interactive by running the underlying jupyter notebook, usually just by clicking the Binder or Google Colab button at the top of the page.</p></li>
 </ul>
-<p>Below is a brief description and evolving list of tips and tricks used to build these pages.</p>
+<p>A longer description and a few tips and tricks for anyone who wants to build similar pages.</p>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -316,10 +310,10 @@
 </div>
 <div class="section" id="concepts">
 <h2><a class="toc-backref" href="#id4">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
-<p>What we’re trying to do is write content using easy human-readable markdown syntax and then regularly convert that to fancy looking rendered HTML and/or other formats such as Latex, PDF, Latex, etc, all without having to learn (too much) of the HTML or Latex that we could have used instead.</p>
+<p>The aim is to write content using easy human-readable markdown syntax and then convert to a nice looking rendered HTML website and/or to other intermediary or final formats such as Latex, PDF, etc. We want to do all this without having to learn (too much) about HTML/CSS or Latex.</p>
 <p>Jupyterbook is part of <a class="reference external" href="https://executablebooks.org/en/latest/">The Executable Book Project</a> and extends the powerful Sphinx Static HTML renderer.</p>
-<p>Many Executable Books and Courses are being written using Jupyterbook. See the <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">Gallery of Jupyter Books</a>.  The <a class="reference external" href="https://quantecon.org/">Quantecon</a> project has been an important force behind the development of Jupyter Book.</p>
-<p>We write most content using simple markdown syntax but augmented in places by <a class="reference external" href="https://jupyterbook.org/content/myst.html">MyST Markdown</a> extended syntax in order to add ‘directives’ and ‘roles’ which allow us to do ‘book writing’ things citations and bibliographies, numbered equations, cross-references, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, etc.</p>
+<p>Many Executable Books and Courses are being written using Jupyterbook. See the <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">Gallery of Jupyter Books</a>.  Some of the peopl behind the <a class="reference external" href="https://quantecon.org/">Quantecon</a> project were important to the development of Jupyter Book.</p>
+<p>Most content is simple markdown syntax but in a few places it is augmented by <a class="reference external" href="https://jupyterbook.org/content/myst.html">MyST Markdown</a> to add extra ‘directives’ and ‘roles’ to allow us to do several ‘book writing’ tasks such as adding bibliographic citations and bibliographies, numbered equations, cross-references, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, etc.</p>
 </div>
 <div class="section" id="setup-and-build">
 <h2><a class="toc-backref" href="#id5">Setup and Build</a><a class="headerlink" href="#setup-and-build" title="Permalink to this headline">¶</a></h2>

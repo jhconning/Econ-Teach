@@ -1,15 +1,12 @@
 # This JupyterBook
 
-This Econ-Teach site was made using [JupyterBook](https://jupyterbook.org/intro.html) which is built on top of the [Sphinx](https://www.sphinx-doc.org/en/master/) documentation system. 
-
-The content was written using a combination of markdown files (with `.md` extensions) and jupyter notebooks (with `.ipynb` extensions) with markdown and python code cells.  
+This Econ-Teach site was made using [JupyterBook](https://jupyterbook.org/intro.html) which leverages the [Sphinx](https://www.sphinx-doc.org/en/master/) documentation system.  All content was written using jupyter notebooks (`.ipynb` extension) which combine markdown text and python code cells and/or with plain markdown files.  
 
 Many of the graphs in the book are interactive because they are either:
-- Geogebra Apps (javascript apps that will run in any browser) 
-- Python interactive widgets.  These may appear as static images on the website but can usually be made interactive by running the underlying jupyter notebook by clicking the Binder or Google Colab button to launch a server.
+- Geogebra Apps (javascript apps that will run immediately in any modern browser). 
+- Python interactive widgets (ipywidgets).  These may appear as static images on the website but can be made interactive by running the underlying jupyter notebook, usually just by clicking the Binder or Google Colab button at the top of the page.
 
-
-Below is a brief description and evolving list of tips and tricks used to build these pages.
+A longer description and a few tips and tricks for anyone who wants to build similar pages.
 
 ```{contents}
 :depth: 3
@@ -17,13 +14,13 @@ Below is a brief description and evolving list of tips and tricks used to build 
 
 ## Concepts
 
-What we're trying to do is write content using easy human-readable markdown syntax and then regularly convert that to fancy looking rendered HTML and/or other formats such as Latex, PDF, Latex, etc, all without having to learn (too much) of the HTML or Latex that we could have used instead.
+The aim is to write content using easy human-readable markdown syntax and then convert to a nice looking rendered HTML website and/or to other intermediary or final formats such as Latex, PDF, etc. We want to do all this without having to learn (too much) about HTML/CSS or Latex.
 
 Jupyterbook is part of [The Executable Book Project](https://executablebooks.org/en/latest/) and extends the powerful Sphinx Static HTML renderer.
 
-Many Executable Books and Courses are being written using Jupyterbook. See the [Gallery of Jupyter Books](https://executablebooks.org/en/latest/gallery.html).  The [Quantecon](https://quantecon.org/) project has been an important force behind the development of Jupyter Book.
+Many Executable Books and Courses are being written using Jupyterbook. See the [Gallery of Jupyter Books](https://executablebooks.org/en/latest/gallery.html).  Some of the peopl behind the [Quantecon](https://quantecon.org/) project were important to the development of Jupyter Book.
 
-We write most content using simple markdown syntax but augmented in places by [MyST Markdown](https://jupyterbook.org/content/myst.html) extended syntax in order to add 'directives' and 'roles' which allow us to do 'book writing' things citations and bibliographies, numbered equations, cross-references, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, etc.
+Most content is simple markdown syntax but in a few places it is augmented by [MyST Markdown](https://jupyterbook.org/content/myst.html) to add extra 'directives' and 'roles' to allow us to do several 'book writing' tasks such as adding bibliographic citations and bibliographies, numbered equations, cross-references, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, etc.
 
 ## Setup and Build
 

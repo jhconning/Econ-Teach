@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Tariff &#8212; Econ-Teach Notebooks</title>
+    <title>Simple Tariff Diagram &#8212; Econ-Teach Notebooks</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Tariffs in General equilibrium" href="Tariff_in_general_equilibrium.html" />
-    <link rel="prev" title="Trade Protection" href="Protection_top.html" />
+    <link rel="prev" title="Edgeworth Box: Efficiency in production allocation" href="HOS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,13 +93,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Intro Microeconomics
+  Micro Theory
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro/intro_geogebra.html">
-   Introduction to Microeconomics (Geogebra)
+  <a class="reference internal" href="../micro/01_Constrained_Optimization.html">
+   Constrained Optimization
   </a>
  </li>
 </ul>
@@ -110,18 +110,8 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Ricardian_top.html">
-   Ricardian Trade
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="Ricardian_Trade.html">
    The Ricardian Trade Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="SFM_top.html">
-   HOS and SFM models
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,19 +124,9 @@
    Edgeworth Box: Efficiency in production allocation
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="CRSTechnology.html">
-   Constant Returns to Scale Technologies
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Protection_top.html">
-   Trade Protection
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Simple Tariff
+   Simple Tariff Diagram
   </a>
  </li>
  <li class="toctree-l1">
@@ -157,13 +137,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Micro Theory
+  Intro Microeconomics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../micro/01_Constrained_Optimization.html">
-   Constrained Optimization
+  <a class="reference internal" href="../intro/intro_geogebra.html">
+   Introduction to Microeconomics (Geogebra)
   </a>
  </li>
 </ul>
@@ -287,9 +267,10 @@
         
               <div>
                 
-  <div class="section" id="simple-tariff">
-<h1>Simple Tariff<a class="headerlink" href="#simple-tariff" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
+  <div class="section" id="simple-tariff-diagram">
+<h1>Simple Tariff Diagram<a class="headerlink" href="#simple-tariff-diagram" title="Permalink to this headline">¶</a></h1>
+<p>Not quite finished.</p>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -298,7 +279,7 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">S</span> <span class="o">=</span> <span class="n">Q</span><span class="o">*</span><span class="mf">0.5</span>
@@ -307,7 +288,7 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-bright&#39;</span><span class="p">)</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -324,15 +305,16 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">87</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;S&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$P_W$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$P_W(1+t)$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$P_W$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$P_W(1+t)$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>   
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/TariffPartial_3_0.svg" src="../../_images/TariffPartial_3_0.svg" /></div>
+<img alt="../../_images/TariffPartial_3_0.png" src="../../_images/TariffPartial_3_0.png" />
+</div>
 </div>
 </div>
 
@@ -348,13 +330,13 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python379jvsc74a57bd045ff23af1ec6ddd91151147c9b40c85b53c9b169000ec0677444111457c9a5fe",
+            kernelName: "python3",
             path: "./notebooks/trade"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python379jvsc74a57bd045ff23af1ec6ddd91151147c9b40c85b53c9b169000ec0677444111457c9a5fe'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -366,11 +348,11 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="Protection_top.html" title="previous page">
+        <a class="left-prev" href="HOS.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Trade Protection</p>
+                <p class="prevnext-title">Edgeworth Box: Efficiency in production allocation</p>
             </div>
         </a>
     </div>

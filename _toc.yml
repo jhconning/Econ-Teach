@@ -2,8 +2,10 @@ format: jb-book
 root: README
 parts:
 - caption: Micro Theory
+  numbered: true
   chapters:
   - file: notebooks/micro/01_Constrained_Optimization
+  - file: notebooks/trade/Edgeworth
 - caption: Trade
   chapters:
   - file: notebooks/trade/Ricardian_Trade

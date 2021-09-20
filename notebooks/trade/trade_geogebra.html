@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Tariff Diagram &#8212; Econ-Teach Notebooks</title>
+    <title>Trade Geogebra Interactives &#8212; Econ-Teach Notebooks</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tariffs in General equilibrium" href="Tariff_in_general_equilibrium.html" />
-    <link rel="prev" title="Hechscher-Ohlin-Samuelson" href="HOS.html" />
+    <link rel="next" title="The Ricardian Trade Model" href="Ricardian_Trade.html" />
+    <link rel="prev" title="Edgeworth Box" href="Edgeworth.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -118,8 +118,8 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="trade_geogebra.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Trade Geogebra Interactives
   </a>
  </li>
@@ -138,8 +138,8 @@
    Hechscher-Ohlin-Samuelson
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="TariffPartial.html">
    Simple Tariff Diagram
   </a>
  </li>
@@ -213,9 +213,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/trade/TariffPartial.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/notebooks/trade/trade_geogebra.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -246,33 +246,75 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jhconning/Econ-Teach/master?urlpath=tree/notebooks/trade/TariffPartial.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jhconning/Econ-Teach/blob/master/notebooks/trade/TariffPartial.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ricardian-model">
+   Ricardian Model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-production-possibility-frontier">
+     Linear Production Possibility Frontier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#four-quadrant-ricadian-ppf">
+     Four Quadrant Ricadian PPF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ricadian-gains-to-trade">
+     Ricadian Gains to Trade
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-standard-trade-model">
+   The Standard Trade Model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#small-economy-gains-to-trade">
+     Small Economy Gains to Trade
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-factor-model-2-panel">
+     Specific Factor Model (2 panel)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hecksher-ohlin-samuelson">
+   Hecksher-Ohlin-Samuelson
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rybczynski-and-hos-theorems">
+     Rybczynski and HOS Theorems
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#international-migration">
+   International Migration
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -281,54 +323,94 @@
         
               <div>
                 
-  <div class="section" id="simple-tariff-diagram">
-<h1>Simple Tariff Diagram<a class="headerlink" href="#simple-tariff-diagram" title="Permalink to this headline">¶</a></h1>
-<p>Not quite finished.</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
+  <div class="section" id="trade-geogebra-interactives">
+<h1><a class="toc-backref" href="#id1">Trade Geogebra Interactives</a><a class="headerlink" href="#trade-geogebra-interactives" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#trade-geogebra-interactives" id="id1">Trade Geogebra Interactives</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ricardian-model" id="id2">Ricardian Model</a></p>
+<ul>
+<li><p><a class="reference internal" href="#linear-production-possibility-frontier" id="id3">Linear Production Possibility Frontier</a></p></li>
+<li><p><a class="reference internal" href="#four-quadrant-ricadian-ppf" id="id4">Four Quadrant Ricadian PPF</a></p></li>
+<li><p><a class="reference internal" href="#ricadian-gains-to-trade" id="id5">Ricadian Gains to Trade</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#the-standard-trade-model" id="id6">The Standard Trade Model</a></p>
+<ul>
+<li><p><a class="reference internal" href="#small-economy-gains-to-trade" id="id7">Small Economy Gains to Trade</a></p></li>
+<li><p><a class="reference internal" href="#specific-factor-model-2-panel" id="id8">Specific Factor Model (2 panel)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#hecksher-ohlin-samuelson" id="id9">Hecksher-Ohlin-Samuelson</a></p>
+<ul>
+<li><p><a class="reference internal" href="#rybczynski-and-hos-theorems" id="id10">Rybczynski and HOS Theorems</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#international-migration" id="id11">International Migration</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>The diagrams below are immediately interactive</p>
+<div class="section" id="ricardian-model">
+<h2><a class="toc-backref" href="#id2">Ricardian Model</a><a class="headerlink" href="#ricardian-model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linear-production-possibility-frontier">
+<h3><a class="toc-backref" href="#id3">Linear Production Possibility Frontier</a><a class="headerlink" href="#linear-production-possibility-frontier" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/se3ksgsb">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="PPF" src="https://www.geogebra.org/material/iframe/id/se3ksgsb/width/800/height/650/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="700px" style="border:0px;"> </iframe>
+</div>
+<div class="section" id="four-quadrant-ricadian-ppf">
+<h3><a class="toc-backref" href="#id4">Four Quadrant Ricadian PPF</a><a class="headerlink" href="#four-quadrant-ricadian-ppf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/zzvjzktm">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="PPF_4quad2" src="https://www.geogebra.org/material/iframe/id/zzvjzktm/width/700/height/450/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="500px" style="border:0px;"> </iframe>
+</div>
+<div class="section" id="ricadian-gains-to-trade">
+<h3><a class="toc-backref" href="#id5">Ricadian Gains to Trade</a><a class="headerlink" href="#ricadian-gains-to-trade" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/zzvjzktm">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="Ricardo PPF3" src="https://www.geogebra.org/material/iframe/id/v9m38qrg/width/900/height/722/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="900px" height="500px" style="border:0px;"> </iframe>
 </div>
 </div>
+<div class="section" id="the-standard-trade-model">
+<h2><a class="toc-backref" href="#id6">The Standard Trade Model</a><a class="headerlink" href="#the-standard-trade-model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="small-economy-gains-to-trade">
+<h3><a class="toc-backref" href="#id7">Small Economy Gains to Trade</a><a class="headerlink" href="#small-economy-gains-to-trade" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/qpam7dra">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="Ricardo PPF3" src="https://www.geogebra.org/material/iframe/id/qpam7dra/width/900/height/722/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="900px" height="500px" style="border:0px;"> </iframe>
 </div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">S</span> <span class="o">=</span> <span class="n">Q</span><span class="o">*</span><span class="mf">0.5</span>
-<span class="n">D</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">Q</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-bright&#39;</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">S</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">D</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Q - jets&#39;</span><span class="p">)</span>
-<span class="n">major_ticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>   
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">major_ticks</span><span class="p">)</span> 
-
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">87</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="s2">&quot;S&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$P_W$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$P_W(1+t)$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>   
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
+<div class="section" id="specific-factor-model-2-panel">
+<h3><a class="toc-backref" href="#id8">Specific Factor Model (2 panel)</a><a class="headerlink" href="#specific-factor-model-2-panel" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/r52rb2uj">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="Ricardo PPF3" src="https://www.geogebra.org/material/iframe/id/r52rb2uj/width/1200/height/752/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="900px" height="500px" style="border:0px;"> </iframe>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/TariffPartial_3_0.png" src="../../_images/TariffPartial_3_0.png" />
+<div class="section" id="hecksher-ohlin-samuelson">
+<h2><a class="toc-backref" href="#id9">Hecksher-Ohlin-Samuelson</a><a class="headerlink" href="#hecksher-ohlin-samuelson" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rybczynski-and-hos-theorems">
+<h3><a class="toc-backref" href="#id10">Rybczynski and HOS Theorems</a><a class="headerlink" href="#rybczynski-and-hos-theorems" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/v7fx4stf">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="TaxShift_Big2" src="https://www.geogebra.org/material/iframe/id/v7fx4stf/width/900/height/670/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="622px" style="border:0px;"> </iframe>
 </div>
+</div>
+<div class="section" id="international-migration">
+<h2><a class="toc-backref" href="#id11">International Migration</a><a class="headerlink" href="#international-migration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geogebra.org/classic/mwptkgwf">Geogebra Source</a></p></li>
+</ul>
+<iframe scrolling="no" title="TaxShift_Big2" src="https://www.geogebra.org/material/iframe/id/mwptkgwf/width/900/height/700/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="622px" style="border:0px;"> </iframe>
 </div>
 </div>
 
@@ -362,19 +444,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="HOS.html" title="previous page">
+        <a class="left-prev" href="Edgeworth.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Hechscher-Ohlin-Samuelson</p>
+                <p class="prevnext-title">Edgeworth Box</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="Tariff_in_general_equilibrium.html" title="next page">
+        <a class="right-next" href="Ricardian_Trade.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Tariffs in General equilibrium</p>
+                <p class="prevnext-title">The Ricardian Trade Model</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

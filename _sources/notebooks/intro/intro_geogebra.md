@@ -1,4 +1,4 @@
-# Micro Geogebra Interactives
+# Microeconomics with geogebra
 
 ```{contents}
 :depth: 3

@@ -1,4 +1,4 @@
-# Trade Geogebra Interactives
+# Trade Theory with geogebra
 
 ```{contents}
 :depth: 3
@@ -17,7 +17,7 @@ The diagrams below are immediately interactive
 
 <iframe scrolling="no" title="PPF_4quad2" src="https://www.geogebra.org/material/iframe/id/zzvjzktm/width/700/height/450/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="700px" height="500px" style="border:0px;"> </iframe>
 
-### Ricadian Gains to Trade
+### Ricardian Gains to Trade
 - [Geogebra Source](https://www.geogebra.org/classic/zzvjzktm)
 
 <iframe scrolling="no" title="Ricardo PPF3" src="https://www.geogebra.org/material/iframe/id/v9m38qrg/width/900/height/722/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="900px" height="500px" style="border:0px;"> </iframe>

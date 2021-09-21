@@ -8,7 +8,7 @@ This Econ-Teach site was made using [JupyterBook](https://jupyterbook.org/intro.
 
 Some pages contain [geogebra applets](https://geogebra.org) that are immediately interactive in any modern browser.   Other pages which have been created as jupyter notebooks with embedded  python code will display as static pages but can be modified and made interactive by running the the jupyter notebook on a server.  This can be accomplished by clicking the Binder or Google Colab button at the top of the page, or by cloning the [Econ-Teach github repository](https://github.com/jhconning/Econ-Teach) to your local computer and then running them on a local jupyter notebook server.  Here is one [guide](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to getting started. 
 
-What follows is a longer description and a few tips and tricks for anyone who wants to build similar pages.
+ Most users can interact with the content without having to learn how the entire 'book/website' was built. What follows are a few pointers and tips only for those who might be curious about how to build a similar site.
 
 
 ## Concepts
@@ -30,6 +30,9 @@ Suppose you have [cloned](https://docs.github.com/en/repositories/creating-and-m
 `jb build .`
 
 Then jupyterbook will build a local HTML website which you can view from a browser (at the end of the build process it will tell you how to open it).  
+
+
+## Github Actions and webpage
 
 In order to build and share a website that can be reached from anywhere on the internet I use the free github pages servive. 
 

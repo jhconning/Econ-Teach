@@ -270,6 +270,11 @@
    Setup and Build
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-actions-and-webpage">
+   Github Actions and webpage
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -290,13 +295,14 @@
 <ul>
 <li><p><a class="reference internal" href="#concepts" id="id4">Concepts</a></p></li>
 <li><p><a class="reference internal" href="#setup-and-build" id="id5">Setup and Build</a></p></li>
+<li><p><a class="reference internal" href="#github-actions-and-webpage" id="id6">Github Actions and webpage</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <p>This Econ-Teach site was made using <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a> which, in turn, leverages the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> documentation system.  These tools take content written in jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension) and markdown text files (<code class="docutils literal notranslate"><span class="pre">.md</span></code> extension) to transform text, math input, and python code, into the nicely rendered HTML code of this website.  Some of the notebooks that embed code can then be run on a jupyter notebook server on the users’ personal computer, or in the cloud, to make some of the visualizations and simulations interactive.</p>
 <p>Some pages contain <a class="reference external" href="https://geogebra.org">geogebra applets</a> that are immediately interactive in any modern browser.   Other pages which have been created as jupyter notebooks with embedded  python code will display as static pages but can be modified and made interactive by running the the jupyter notebook on a server.  This can be accomplished by clicking the Binder or Google Colab button at the top of the page, or by cloning the <a class="reference external" href="https://github.com/jhconning/Econ-Teach">Econ-Teach github repository</a> to your local computer and then running them on a local jupyter notebook server.  Here is one <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">guide</a> to getting started.</p>
-<p>What follows is a longer description and a few tips and tricks for anyone who wants to build similar pages.</p>
+<p>Most users can interact with the content without having to learn how the entire ‘book/website’ was built. What follows are a few pointers and tips only for those who might be curious about how to build a similar site.</p>
 <div class="section" id="concepts">
 <h2><a class="toc-backref" href="#id4">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
 <p>The aim is to create content using easy human-readable <a class="reference external" href="https://www.markdownguide.org/getting-started/">markdown</a> in combination with python (or other coding languages) to explore ideas and create scientific content with simulations and visualizations and to then convert this via a nice looking rendered website and/or to other intermediary or final formats such as Latex, PDF, etc.  In short, we want to get a nice looking website and ‘book’ content for sharing reproducible research without having to learn (too much) HTML/CSS, Latex or other technical content.</p>
@@ -310,6 +316,9 @@
 <p>Suppose you have <a class="reference external" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">cloned</a> the <a class="reference external" href="https://github.com/jhconning/Econ-Teach">Econ-Teach</a>repository that builds this site to a folder on your machine labeled <code class="docutils literal notranslate"><span class="pre">Econ-Teach</span></code> and have already installed jupyterbook.  If you then open up an Anaconda command terminal on your machine and navigate to that folder, you can then type</p>
 <p><code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code></p>
 <p>Then jupyterbook will build a local HTML website which you can view from a browser (at the end of the build process it will tell you how to open it).</p>
+</div>
+<div class="section" id="github-actions-and-webpage">
+<h2><a class="toc-backref" href="#id6">Github Actions and webpage</a><a class="headerlink" href="#github-actions-and-webpage" title="Permalink to this headline">¶</a></h2>
 <p>In order to build and share a website that can be reached from anywhere on the internet I use the free github pages servive.</p>
 <p>I’ve <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions">setup a github action</a> so that any new push of new content to the Github repository at <a class="reference external" href="https://github.com/jhconning/Econ-Teach">github.com/jhconning/Econ-Teach</a> will trigger the creation of a virtual cloud machine that will then produce the jupyterbook site using the build process just described such that the rendered site then displays at <a class="reference external" href="https://jhconning.github.io/Econ-Teach">jhconning.github.io/Econ-Teach</a>.  It’s a neat process and it’s fun to see github actions do all this work for you.  There may be a few minutes delay between a new build and the changes appearing on the site.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
 <hr class="footnotes docutils" />

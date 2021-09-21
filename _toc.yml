@@ -11,6 +11,7 @@ parts:
   - file: notebooks/trade/Ricardian_Trade
   - file: notebooks/trade/SFM
   - file: notebooks/trade/HOS
+  - file: notebooks/trade/IRS_monopolistic
   - file: notebooks/trade/TariffPartial
   - file: notebooks/trade/Tariff_in_general_equilibrium
 #- caption: Development and PoliEc

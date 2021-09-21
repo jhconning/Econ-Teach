@@ -38,6 +38,12 @@ In order to build and share a website that can be reached from anywhere on the i
 
 I've [setup a github action](https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions) so that any new push of new content to the Github repository at [github.com/jhconning/Econ-Teach](https://github.com/jhconning/Econ-Teach) will trigger the creation of a virtual cloud machine that will then produce the jupyterbook site using the build process just described such that the rendered site then displays at [jhconning.github.io/Econ-Teach](https://jhconning.github.io/Econ-Teach).  It's a neat process and it's fun to see github actions do all this work for you.  There may be a few minutes delay between a new build and the changes appearing on the site.[^1]
 
+## Workflow
+
+I typically develop jupyter notebook and markdown file content using [jupyterlab](https://jupyter.org/) and [Visual Studio Code](https://code.visualstudio.com/) to edit content and move files around, but I sometimes use a markdown editor such as [Typora](https://typora.io/) particularly if I'm going to type a lot of math.  You can have these different tools open at the same time, editing the same files.  VS code allows you to preview how both markdown files and jupyter notebooks will render, plus you can open up a terminal window to run local jupyterbook builds to see how they look in the browser.  
+
+When I'm satisified that new content is ready to be shared I will then push the changes to the github repository (either via the command line, or using either VS code or the github desktop app).  I only push the 'source' files (markdown, jupyter notebooks, and relevant other files) not the locally rendered HTML because, as mentioned, a github action will build the site on a virtual machine (everything needed to make it run is in the [book.yml](https://github.com/jhconning/Econ-Teach/blob/master/.github/workflows/book.yml) configuration file).  
+
 
 
 [^1]: If setting up your own page, make sure you've enabled Github pages in the settings.  Also make sure that your version of the [book.yml](https://github.com/jhconning/Econ-Teach/blob/master/.github/workflows/book.yml) file points to the right branch (e.g. 'main' or 'master').

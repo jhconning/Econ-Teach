@@ -1,299 +1,362 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>This JupyterBook &#8212; Econ-Teach Notebooks</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/how/how_top';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Microeconomics with geogebra" href="../intro/intro_geogebra.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Econ-Teach Notebooks</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../README.html">
-   Teaching Economics Notebooks
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Micro Theory
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    Teaching Economics Notebooks
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Micro Theory</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../micro/01_Constrained_Optimization.html">
-   Constrained Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/Edgeworth.html">
-   Edgeworth Box
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../micro/01_Constrained_Optimization.html">Constrained Optimization</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../trade/Edgeworth.html">Edgeworth Box</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Trade
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Trade</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/trade_geogebra.html">
-   Trade Theory with geogebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/Ricardian_Trade.html">
-   The Ricardian Trade Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/SFM.html">
-   The Specific Factors Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/HOS.html">
-   Hechscher-Ohlin-Samuelson
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/IRS_monopolistic.html">
-   IRS, Product Variety, and Trade
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/TariffPartial.html">
-   Simple Tariff Diagram
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../trade/Tariff_in_general_equilibrium.html">
-   Tariffs in General equilibrium
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/trade_geogebra.html">Trade Theory with geogebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/Ricardian_Trade.html">The Ricardian Trade Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/SFM.html">The Specific Factors Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/HOS.html">Hechscher-Ohlin-Samuelson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/IRS_monopolistic.html">IRS, Product Variety, and Trade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/TariffPartial.html">Simple Tariff Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trade/Tariff_in_general_equilibrium.html">Tariffs in General equilibrium</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Intro Microeconomics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro Microeconomics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/intro_geogebra.html">
-   Microeconomics with geogebra
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/intro_geogebra.html">Microeconomics with geogebra</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  This Book
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">This Book</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   This JupyterBook
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">This JupyterBook</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/how/how_top.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/jhconning/Econ-Teach"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/jhconning/Econ-Teach" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/how/how_top.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>This JupyterBook</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concepts">
-   Concepts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup-and-build">
-   Setup and Build
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#github-actions-and-webpage">
-   Github Actions and webpage
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#workflow">
-   Workflow
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concepts">Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-build">Setup and Build</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-actions-and-webpage">Github Actions and webpage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="this-jupyterbook">
-<h1><a class="toc-backref" href="#id3">This JupyterBook</a><a class="headerlink" href="#this-jupyterbook" title="Permalink to this headline">¶</a></h1>
-<div class="contents topic" id="contents">
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="this-jupyterbook">
+<h1><a class="toc-backref" href="#id3" role="doc-backlink">This JupyterBook</a><a class="headerlink" href="#this-jupyterbook" title="Permalink to this heading">#</a></h1>
+<nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#this-jupyterbook" id="id3">This JupyterBook</a></p>
@@ -305,41 +368,40 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <p>This Econ-Teach site was made using <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a> which, in turn, leverages the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> documentation system.  These tools take content written in jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension) and markdown text files (<code class="docutils literal notranslate"><span class="pre">.md</span></code> extension) to transform text, math input, and python code, into the nicely rendered HTML code of this website.  Some of the notebooks that embed code can then be run on a jupyter notebook server on the users’ personal computer, or in the cloud, to make some of the visualizations and simulations interactive.</p>
 <p>Some pages contain <a class="reference external" href="https://geogebra.org">geogebra applets</a> that are immediately interactive in any modern browser.   Other pages which have been created as jupyter notebooks with embedded  python code will display as static pages but can be modified and made interactive by running the the jupyter notebook on a server.  This can be accomplished by clicking the Binder or Google Colab button at the top of the page, or by cloning the <a class="reference external" href="https://github.com/jhconning/Econ-Teach">Econ-Teach github repository</a> to your local computer and then running them on a local jupyter notebook server.  Here is one <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">guide</a> to getting started.</p>
 <p>Most users can interact with the content without having to learn how the entire ‘book/website’ was built. What follows are a few pointers and tips only for those who might be curious about how to build a similar site.</p>
-<div class="section" id="concepts">
-<h2><a class="toc-backref" href="#id4">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<section id="concepts">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Concepts</a><a class="headerlink" href="#concepts" title="Permalink to this heading">#</a></h2>
 <p>The aim is to create content using easy human-readable <a class="reference external" href="https://www.markdownguide.org/getting-started/">markdown</a> in combination with python (or other coding languages) to explore ideas and create scientific content with simulations and visualizations and to then convert this via a nice looking rendered website and/or to other intermediary or final formats such as Latex, PDF, etc.  In short, we want to get a nice looking website and ‘book’ content for sharing reproducible research without having to learn (too much) HTML/CSS, Latex or other technical content.</p>
 <p><a class="reference external" href="https://jupyter.org/">Jupyter notebooks</a> already accomplish much of this goal by themselves by providing a ‘front end’ for mixing text, math and code.  Jupyter notebooks that are posted to sites such as github are automatically rendered by those sites in human readable form (see, for example, <a class="reference external" href="https://github.com/jhconning/Econ-Teach/blob/master/notebooks/trade/Edgeworth.ipynb">Edgeworth.ipynb</a>).  This however allows one to only display one notebook at a time and for a larger project one would want to organize several notebooks and markdown files into a clearly navigable book or website.</p>
 <p>Jupyterbook was created for this purpose as part of <a class="reference external" href="https://executablebooks.org/en/latest/">The Executable Book Project</a>.  Many Executable Books and Courses are being written using Jupyterbook. See the <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">Gallery of Jupyter Books</a>.  Some of the peopl behind the <a class="reference external" href="https://quantecon.org/">Quantecon</a> project were important to the development of Jupyter Book.</p>
 <p>Jupyterbook extends the simple markdown syntax typically used for jupyter notebooks by adding extra <a class="reference external" href="https://jupyterbook.org/content/myst.html">MyST Markdown</a> ‘directives’ and ‘roles’ to allow us several ‘book writing’ tasks including adding bibliographic citations and bibliographies, numberering equations, adding cross-references, creating tabs and dropdowns, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, hiding code, etc.</p>
-</div>
-<div class="section" id="setup-and-build">
-<h2><a class="toc-backref" href="#id5">Setup and Build</a><a class="headerlink" href="#setup-and-build" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="setup-and-build">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Setup and Build</a><a class="headerlink" href="#setup-and-build" title="Permalink to this heading">#</a></h2>
 <p>See installation instructions on the <a class="reference external" href="https://jupyterbook.org/">jupyter book</a> page.  We need a <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> with basic configuration settings and a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file that establishes which files will be included in the navigation structure that you’ll to the left of the site.</p>
 <p>Suppose you have <a class="reference external" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">cloned</a> the <a class="reference external" href="https://github.com/jhconning/Econ-Teach">Econ-Teach</a>repository that builds this site to a folder on your machine labeled <code class="docutils literal notranslate"><span class="pre">Econ-Teach</span></code> and have already installed jupyterbook.  If you then open up an Anaconda command terminal on your machine and navigate to that folder, you can then type</p>
 <p><code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code></p>
 <p>Then jupyterbook will build a local HTML website which you can view from a browser (at the end of the build process it will tell you how to open it).</p>
-</div>
-<div class="section" id="github-actions-and-webpage">
-<h2><a class="toc-backref" href="#id6">Github Actions and webpage</a><a class="headerlink" href="#github-actions-and-webpage" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="github-actions-and-webpage">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Github Actions and webpage</a><a class="headerlink" href="#github-actions-and-webpage" title="Permalink to this heading">#</a></h2>
 <p>In order to build and share a website that can be reached from anywhere on the internet I use the free github pages servive.</p>
-<p>I’ve <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions">setup a github action</a> so that any new push of new content to the Github repository at <a class="reference external" href="https://github.com/jhconning/Econ-Teach">github.com/jhconning/Econ-Teach</a> will trigger the creation of a virtual cloud machine that will then produce the jupyterbook site using the build process just described such that the rendered site then displays at <a class="reference external" href="https://jhconning.github.io/Econ-Teach">jhconning.github.io/Econ-Teach</a>.  It’s a neat process and it’s fun to see github actions do all this work for you.  There may be a few minutes delay between a new build and the changes appearing on the site.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
-</div>
-<div class="section" id="workflow">
-<h2><a class="toc-backref" href="#id7">Workflow</a><a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>I’ve <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions">setup a github action</a> so that any new push of new content to the Github repository at <a class="reference external" href="https://github.com/jhconning/Econ-Teach">github.com/jhconning/Econ-Teach</a> will trigger the creation of a virtual cloud machine that will then produce the jupyterbook site using the build process just described such that the rendered site then displays at <a class="reference external" href="https://jhconning.github.io/Econ-Teach">jhconning.github.io/Econ-Teach</a>.  It’s a neat process and it’s fun to see github actions do all this work for you.  There may be a few minutes delay between a new build and the changes appearing on the site.<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="workflow">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Workflow</a><a class="headerlink" href="#workflow" title="Permalink to this heading">#</a></h2>
 <p>I typically develop jupyter notebook and markdown file content using <a class="reference external" href="https://jupyter.org/">jupyterlab</a> and <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> to edit content and move files around, but I sometimes use a markdown editor such as <a class="reference external" href="https://typora.io/">Typora</a> particularly if I’m going to type a lot of math.  You can have these different tools open at the same time, editing the same files.  VS code allows you to preview how both markdown files and jupyter notebooks will render, plus you can open up a terminal window to run local jupyterbook builds to see how they look in the browser.</p>
 <p>When I’m satisified that new content is ready to be shared I will then push the changes to the github repository (either via the command line, or using either VS code or the github desktop app).  I only push the ‘source’ files (markdown, jupyter notebooks, and relevant other files) not the locally rendered HTML because, as mentioned, a github action will build the site on a virtual machine (everything needed to make it run is in the <a class="reference external" href="https://github.com/jhconning/Econ-Teach/blob/master/.github/workflows/book.yml">book.yml</a> configuration file).</p>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>If setting up your own page, make sure you’ve enabled Github pages in the settings.  Also make sure that your version of the <a class="reference external" href="https://github.com/jhconning/Econ-Teach/blob/master/.github/workflows/book.yml">book.yml</a> file points to the right branch (e.g. ‘main’ or ‘master’).</p>
-</dd>
-</dl>
-</div>
-</div>
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>If setting up your own page, make sure you’ve enabled Github pages in the settings.  Also make sure that your version of the <a class="reference external" href="https://github.com/jhconning/Econ-Teach/blob/master/.github/workflows/book.yml">book.yml</a> file points to the right branch (e.g. ‘main’ or ‘master’).</p>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -353,7 +415,7 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/how"
         },
         predefinedOutput: true
@@ -361,47 +423,99 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        
-            
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../intro/intro_geogebra.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Microeconomics with geogebra</p>
-            </div>
-        </a>
-    </div>
-
-</div>
-        
-        </div>
-    </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Jonathan Conning<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro/intro_geogebra.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Microeconomics with geogebra</p>
       </div>
-    </div>
+    </a>
+</div></div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concepts">Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-build">Setup and Build</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-actions-and-webpage">Github Actions and webpage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonathan Conning
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

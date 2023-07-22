@@ -1,362 +1,425 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>IRS, Product Variety, and Trade &#8212; Econ-Teach Notebooks</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/trade/IRS_monopolistic';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Simple Tariff Diagram" href="TariffPartial.html" />
     <link rel="prev" title="Hechscher-Ohlin-Samuelson" href="HOS.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Econ-Teach Notebooks</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../README.html">
-   Teaching Economics Notebooks
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Micro Theory
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    Teaching Economics Notebooks
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Micro Theory</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../micro/01_Constrained_Optimization.html">
-   Constrained Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Edgeworth.html">
-   Edgeworth Box
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../micro/01_Constrained_Optimization.html">Constrained Optimization</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Edgeworth.html">Edgeworth Box</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Trade
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Trade</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="trade_geogebra.html">
-   Trade Theory with geogebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Ricardian_Trade.html">
-   The Ricardian Trade Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="SFM.html">
-   The Specific Factors Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="HOS.html">
-   Hechscher-Ohlin-Samuelson
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   IRS, Product Variety, and Trade
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="TariffPartial.html">
-   Simple Tariff Diagram
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Tariff_in_general_equilibrium.html">
-   Tariffs in General equilibrium
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="trade_geogebra.html">Trade Theory with geogebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ricardian_Trade.html">The Ricardian Trade Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SFM.html">The Specific Factors Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HOS.html">Hechscher-Ohlin-Samuelson</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">IRS, Product Variety, and Trade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TariffPartial.html">Simple Tariff Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tariff_in_general_equilibrium.html">Tariffs in General equilibrium</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Intro Microeconomics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro Microeconomics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro/intro_geogebra.html">
-   Microeconomics with geogebra
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/intro_geogebra.html">Microeconomics with geogebra</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  This Book
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">This Book</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../how/how_top.html">
-   This JupyterBook
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../how/how_top.html">This JupyterBook</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/trade/IRS_monopolistic.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/jhconning/Econ-Teach"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
+<div class="article-header-buttons">
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jhconning/Econ-Teach/master?urlpath=tree/notebooks/trade/IRS_monopolistic.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jhconning/Econ-Teach/blob/master/notebooks/trade/IRS_monopolistic.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preliminaries">
-   Preliminaries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#firm-technology-and-costs">
-   Firm Technology and Costs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#demand-for-product-variety">
-   Demand for Product Variety
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-for-equilibrium-n-and-bar-p">
-   Solving for equilibrium
-   <span class="math notranslate nohighlight">
-    \(n\)
-   </span>
-   and
-   <span class="math notranslate nohighlight">
-    \(\bar P\)
-   </span>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-cc-curve">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cc
-      </span>
-     </code>
-     curve
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-pp-curve">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pp
-      </span>
-     </code>
-     curve
-    </a>
-   </li>
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jhconning/Econ-Teach/master?urlpath=tree/notebooks/trade/IRS_monopolistic.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jhconning/Econ-Teach/blob/master/notebooks/trade/IRS_monopolistic.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
   </ul>
- </li>
-</ul>
+</div>
 
+
+
+<a href="https://github.com/jhconning/Econ-Teach" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/trade/IRS_monopolistic.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>IRS, Product Variety, and Trade</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-technology-and-costs">Firm Technology and Costs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demand-for-product-variety">Demand for Product Variety</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-for-equilibrium-n-and-bar-p">Solving for equilibrium <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(\bar P\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cc-curve">The <code class="docutils literal notranslate"><span class="pre">cc</span></code> curve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pp-curve">The <code class="docutils literal notranslate"><span class="pre">pp</span></code> curve</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="irs-product-variety-and-trade">
-<h1>IRS, Product Variety, and Trade<a class="headerlink" href="#irs-product-variety-and-trade" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="irs-product-variety-and-trade">
+<h1>IRS, Product Variety, and Trade<a class="headerlink" href="#irs-product-variety-and-trade" title="Permalink to this heading">#</a></h1>
 <p>Here is a presentation and simulation of a model of “Increasing Returns to Scale, monopolistic competition and Trade” based on the Krugman (1979) article by the same name in the <em>Journal of International Economics</em> with the following simplifications and adaptations:</p>
 <ul class="simple">
 <li><p>model and graph analysis simplified to be similar to Krugman, Obstfeld, Melitz textbook.</p></li>
 <li><p>We use the linear demand setup from Salop, S. (1979)  “Monopolistic Competition with Outside Goods,” <em>Bell Journal of Economics</em></p></li>
 </ul>
-<p>This is a jupyter notebook with executable python code for the graphs and simulations. If you want to execute and interact with the content below please first go to the <a class="reference external" href="#Code-Section">Code Section</a> below, execute the code there and then return. Also, if running on Microsoft azure notebooks ‘Change the kernel’ to python 3.6.</p>
-<div class="section" id="preliminaries">
-<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h2>
+<p>This is a jupyter notebook with executable python code for the graphs and simulations. If you want to execute and interact with the content below please first go to the <span class="xref myst">Code Section</span> below, execute the code there and then return. Also, if running on Microsoft azure notebooks ‘Change the kernel’ to python 3.6.</p>
+<section id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h2>
 <p>Consider a demand curve of the form:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -376,9 +439,9 @@ P(q_i) - \mathit{MR}(q_i) = \frac{q_i}{b}
 \)</span>$</p>
 <p>This is also the firm’s <strong>markup over marginal cost</strong> <span class="math notranslate nohighlight">\(P-\mathit{MC}\)</span>  (since <span class="math notranslate nohighlight">\(\mathit{MR=MC}\)</span>).</p>
 <p>Note the larger is <span class="math notranslate nohighlight">\(b\)</span> the more firm sales fall for a given price rise (i.e. the more elastic is demand).</p>
-</div>
-<div class="section" id="firm-technology-and-costs">
-<h2>Firm Technology and Costs<a class="headerlink" href="#firm-technology-and-costs" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="firm-technology-and-costs">
+<h2>Firm Technology and Costs<a class="headerlink" href="#firm-technology-and-costs" title="Permalink to this heading">#</a></h2>
 <p>Each firm has exclusive right to produce a unique product (protected by patent or copyright) but competitors can enter the market to supply similar goods. There is a relatively high fixed cost of establishing a production plant and then a simple constant marginal cost:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -388,9 +451,9 @@ TC(q_i) = F + c \cdot q_i
 $<span class="math notranslate nohighlight">\(
 AC(q_i) = \frac{F}{q_i} + c
 \)</span>$</p>
-</div>
-<div class="section" id="demand-for-product-variety">
-<h2>Demand for Product Variety<a class="headerlink" href="#demand-for-product-variety" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="demand-for-product-variety">
+<h2>Demand for Product Variety<a class="headerlink" href="#demand-for-product-variety" title="Permalink to this heading">#</a></h2>
 <p>Consumers demand variety. Products are symmetric substitutes in consumption. Salop (1979) constructs a model with linear demands</p>
 <p>assume symmetric demand for each good.  Demand for firm <span class="math notranslate nohighlight">\(i\)</span>’s good is:</p>
 <div class="math notranslate nohighlight">
@@ -406,6 +469,11 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 <p>which we can invert to get an inverse demand curve for each firm.</p>
 <p>Monopolistically competitive market with entry will drive <span class="math notranslate nohighlight">\(P=AC\)</span> and hence profits to zero.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -414,8 +482,14 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-colorblind&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
@@ -427,6 +501,7 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -444,6 +519,11 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">A</span><span class="o">/</span><span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">q</span>
@@ -465,8 +545,14 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">firm</span><span class="p">(</span><span class="n">S</span> <span class="o">=</span><span class="n">S</span><span class="p">,</span> <span class="n">F</span><span class="o">=</span><span class="n">F</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">):</span>
     <span class="n">qmax</span> <span class="o">=</span> <span class="mi">15000</span>
@@ -489,6 +575,7 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>The following shows a firm in a long run equilibrium where <span class="math notranslate nohighlight">\(P=AC\)</span>. The <span class="math notranslate nohighlight">\(MR\)</span> curve is not drawn but it would cross the horizontal marginal cost curve to determine the equilibrium quantity.</p>
 <div class="cell docutils container">
@@ -498,7 +585,7 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/IRS_monopolistic_21_0.png" src="../../_images/IRS_monopolistic_21_0.png" />
+<img alt="../../_images/901104ea9e1254e82f83ef6bcb5559a9f7b4064699bf7f19931997f5b8620e93.png" src="../../_images/901104ea9e1254e82f83ef6bcb5559a9f7b4064699bf7f19931997f5b8620e93.png" />
 </div>
 </div>
 <p>Below we can see the effect of increasing market size.  As market size <span class="math notranslate nohighlight">\(S\)</span> increases from <span class="math notranslate nohighlight">\(S=50000\)</span> to <span class="math notranslate nohighlight">\(S=200000\)</span>, the demand curve for each firm shifts out and becomes more elastic (flatter). However, any temporary new profits earned will attract new entrants, and we end up at a new equilibrium with a new <span class="math notranslate nohighlight">\(P=AC\)</span> further down the firm <span class="math notranslate nohighlight">\(AC\)</span>, as shown.</p>
@@ -511,19 +598,19 @@ q_i = \left [\frac{S}{n} + b\bar P  S \right ] - b P S
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/IRS_monopolistic_23_0.png" src="../../_images/IRS_monopolistic_23_0.png" />
+<img alt="../../_images/97cd602e0e60fa10ca06d3268d94bfb3d0c3b206595e0ecf24eb2503f9472fee.png" src="../../_images/97cd602e0e60fa10ca06d3268d94bfb3d0c3b206595e0ecf24eb2503f9472fee.png" />
 </div>
 </div>
-</div>
-<div class="section" id="solving-for-equilibrium-n-and-bar-p">
-<h2>Solving for equilibrium <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(\bar P\)</span><a class="headerlink" href="#solving-for-equilibrium-n-and-bar-p" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="solving-for-equilibrium-n-and-bar-p">
+<h2>Solving for equilibrium <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(\bar P\)</span><a class="headerlink" href="#solving-for-equilibrium-n-and-bar-p" title="Permalink to this heading">#</a></h2>
 <p>In a symmetric equilibrium <span class="math notranslate nohighlight">\(P_i = \bar P\)</span> then  <span class="math notranslate nohighlight">\(q_i = q = \frac{S}{n}\)</span> or <span class="math notranslate nohighlight">\(S = n \cdot q\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 q_i = \left [\frac{S}{n} + b\bar P \right ] - S b P
 \]</div>
-<div class="section" id="the-cc-curve">
-<h3>The <code class="docutils literal notranslate"><span class="pre">cc</span></code> curve<a class="headerlink" href="#the-cc-curve" title="Permalink to this headline">¶</a></h3>
+<section id="the-cc-curve">
+<h3>The <code class="docutils literal notranslate"><span class="pre">cc</span></code> curve<a class="headerlink" href="#the-cc-curve" title="Permalink to this heading">#</a></h3>
 <p>Average cost AC rises with the number of firms  𝑛 , because more firms in the same market means lower production runs and higher average fixed costs.</p>
 <p>Substiting <span class="math notranslate nohighlight">\(q = \frac{S}{n}\)</span> into <span class="math notranslate nohighlight">\(AC = \frac{F}{q} + c\)</span></p>
 <div class="math notranslate nohighlight">
@@ -531,9 +618,9 @@ q_i = \left [\frac{S}{n} + b\bar P \right ] - S b P
 AC = \frac{nF}{S} + c
 \]</div>
 <p>Average cost rises with the number of firms <span class="math notranslate nohighlight">\(n\)</span> because each firm produces less <span class="math notranslate nohighlight">\(\frac{S}{n}\)</span> and so each firm is spreading their fixed costs over</p>
-</div>
-<div class="section" id="the-pp-curve">
-<h3>The <code class="docutils literal notranslate"><span class="pre">pp</span></code> curve<a class="headerlink" href="#the-pp-curve" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-pp-curve">
+<h3>The <code class="docutils literal notranslate"><span class="pre">pp</span></code> curve<a class="headerlink" href="#the-pp-curve" title="Permalink to this heading">#</a></h3>
 <p>Price falls with the number of firms  𝑛  because increased competition reduces markups.</p>
 <p>In a symmetric equilibrium firm demand could be written
 $<span class="math notranslate nohighlight">\(
@@ -551,6 +638,11 @@ P = c + \frac{q}{b^\prime}
 P = c + \frac{1}{b \cdot n}
 \]</div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mkt_eq</span><span class="p">(</span><span class="n">S</span> <span class="o">=</span> <span class="n">S</span><span class="p">,</span> <span class="n">F</span><span class="o">=</span><span class="n">F</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">):</span>
     <span class="n">nmax</span> <span class="o">=</span> <span class="mi">150</span>
@@ -574,6 +666,7 @@ P = c + \frac{1}{b \cdot n}
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -585,7 +678,7 @@ P = c + \frac{1}{b \cdot n}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n = 45, P= 52, q =  4472, F/q =  22
 </pre></div>
 </div>
-<img alt="../../_images/IRS_monopolistic_32_1.png" src="../../_images/IRS_monopolistic_32_1.png" />
+<img alt="../../_images/bdae647f928537b69b6f184b6dfb519abebde54795b219b4220758446642f3aa.png" src="../../_images/bdae647f928537b69b6f184b6dfb519abebde54795b219b4220758446642f3aa.png" />
 </div>
 </div>
 <p>Here we can see the effect of Opening to Trade (the potential market for each firm now becomes the sum of the country <span class="math notranslate nohighlight">\(S\)</span>). Here we suppose four equal size countries open up to each other (the graph then becomes a depiction of the integrated world market).</p>
@@ -602,13 +695,18 @@ P = c + \frac{1}{b \cdot n}
 n = 45, P= 52, q =  4472, F/q =  22
 </pre></div>
 </div>
-<img alt="../../_images/IRS_monopolistic_34_1.png" src="../../_images/IRS_monopolistic_34_1.png" />
+<img alt="../../_images/6569ab9888b5b7febfe42dc266863f3b6dd95740f958b3675f7dda64d2bc0096.png" src="../../_images/6569ab9888b5b7febfe42dc266863f3b6dd95740f958b3675f7dda64d2bc0096.png" />
 </div>
 </div>
 <p>In the example above each country now sells to the entire world market, so the size of each country’s market in effect quadruples. The total number of firms (and products) goes from <span class="math notranslate nohighlight">\(n=22\)</span> in each country (88 firms in total, but only 22 products) to a world total of <span class="math notranslate nohighlight">\(n=32\)</span> firms and products.  Each country now has just 8 firms but each of thse firms is now has much larger production runs (q=4472 after opening to trade compared to q=2236 in the closed economy).</p>
 <p>The price (and average cost) of each product falls from $75 to $52 and the number of product varieties rises from 22 to 32.</p>
 <p>Below, we put the firm-level and market-level graphs side-by-side.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">twopane</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -619,6 +717,7 @@ n = 45, P= 52, q =  4472, F/q =  22
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>Here is the country when closed to trade:</p>
 <div class="cell docutils container">
@@ -631,7 +730,7 @@ n = 45, P= 52, q =  4472, F/q =  22
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n = 22, P= 75, q =  2236, F/q =  45
 </pre></div>
 </div>
-<img alt="../../_images/IRS_monopolistic_39_1.png" src="../../_images/IRS_monopolistic_39_1.png" />
+<img alt="../../_images/50337a070dbd8ce24bd6e5bd4e473e33fbc996a006ccbadc946a4f829b94cbc8.png" src="../../_images/50337a070dbd8ce24bd6e5bd4e473e33fbc996a006ccbadc946a4f829b94cbc8.png" />
 </div>
 </div>
 <p>And after the countries open to trade.</p>
@@ -645,12 +744,12 @@ n = 45, P= 52, q =  4472, F/q =  22
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n = 100, P= 40, q = 10000, F/q =  10
 </pre></div>
 </div>
-<img alt="../../_images/IRS_monopolistic_41_1.png" src="../../_images/IRS_monopolistic_41_1.png" />
+<img alt="../../_images/08ac67afb0bf6775ce5763d128561237af324743f35f033b1ec7d53281d94f07.png" src="../../_images/08ac67afb0bf6775ce5763d128561237af324743f35f033b1ec7d53281d94f07.png" />
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -664,7 +763,7 @@ n = 45, P= 52, q =  4472, F/q =  22
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/trade"
         },
         predefinedOutput: true
@@ -672,56 +771,112 @@ n = 45, P= 52, q =  4472, F/q =  22
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        
-            
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="HOS.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Hechscher-Ohlin-Samuelson</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="TariffPartial.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Simple Tariff Diagram</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
-        
-        </div>
-    </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Jonathan Conning<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="HOS.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Hechscher-Ohlin-Samuelson</p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="TariffPartial.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Simple Tariff Diagram</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-technology-and-costs">Firm Technology and Costs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demand-for-product-variety">Demand for Product Variety</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-for-equilibrium-n-and-bar-p">Solving for equilibrium <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(\bar P\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cc-curve">The <code class="docutils literal notranslate"><span class="pre">cc</span></code> curve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pp-curve">The <code class="docutils literal notranslate"><span class="pre">pp</span></code> curve</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jonathan Conning
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

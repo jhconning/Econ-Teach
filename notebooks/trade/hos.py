@@ -16,7 +16,7 @@ from ipywidgets import interact, fixed
 import seaborn
 
 plt.rcParams["figure.figsize"] = (9,9)
-plt.style.use('seaborn-colorblind')
+plt.style.use('seaborn-v0_8-colorblind')
 plt.rcParams["axes.spines.right"] = True
 plt.rcParams["axes.spines.top"] = False
 plt.rcParams["font.size"] = 18

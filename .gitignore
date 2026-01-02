@@ -4,6 +4,7 @@
 _build/
 scratch/
 *.pyc
+modules/
 .vs/
 .vscode/
 

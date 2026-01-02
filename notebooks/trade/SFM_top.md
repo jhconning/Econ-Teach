@@ -1,4 +1,4 @@
-# HOS and SFM models
+# Standard Trade Models
 
 ## Jupyter Notebooks
 

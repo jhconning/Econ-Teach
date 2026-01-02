@@ -34,6 +34,8 @@ jobs:
 
     # Build the book using MyST
     - name: Build the book
+      env:
+        BASE_URL: /Econ-Teach
       run: |
         myst build --html
 

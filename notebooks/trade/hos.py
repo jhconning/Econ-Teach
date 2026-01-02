@@ -502,12 +502,11 @@ def plot_edgeworth_box(LA: float, Kbar: float = Kbar, Lbar: float = Lbar,
     ax.set_ylim(0, Kbar)
 
     # Efficiency locus
-    ax.plot(La, edgeworth_locus(La, Kbar, Lbar, alpha, beta), 'k-', linewidth=2, label='Efficiency locus')
+    ax.plot(La, edgeworth_locus(La, Kbar, Lbar, alpha, beta), 'k-', linewidth=2)
 
     # Isoquants
-    ax.plot(La, isoquant_K(La, alpha, QA), 'b-', label=f'QA = {QA:.1f}')
-    ax.plot(La, Kbar - isoquant_K(Lbar - La, beta, QM),
-            'g-', label=f'QM = {QM:.1f}')
+    ax.plot(La, isoquant_K(La, alpha, QA), 'b-')
+    ax.plot(La, Kbar - isoquant_K(Lbar - La, beta, QM), 'g-')
 
     # Current allocation
     ax.plot(LA, KA, 'ro', markersize=10)
@@ -520,7 +519,6 @@ def plot_edgeworth_box(LA: float, Kbar: float = Kbar, Lbar: float = Lbar,
 
     ax.set_xlabel(r'$L_A$ - Labor in A', fontsize=16)
     ax.set_ylabel(r'$K_A$ - Capital in A', fontsize=16)
-    ax.legend()
     plt.tight_layout()
 
 

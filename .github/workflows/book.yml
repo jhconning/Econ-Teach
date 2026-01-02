@@ -13,19 +13,29 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    # Install dependencies
+    # Install Python dependencies
     - name: Set up Python 3.10
       uses: actions/setup-python@v5
       with:
         python-version: "3.10"
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         pip install -r requirements.txt
-    # Build the book
+
+    # Install Node.js and MyST CLI
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: Install MyST CLI
+      run: npm install -g mystmd
+
+    # Build the book using MyST
     - name: Build the book
       run: |
-        jupyter-book build .
+        myst build --html
 
     # Diagnostic step
     - name: List build directory
@@ -36,5 +46,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+        publish_dir: ./_build/site
         force_orphan: true

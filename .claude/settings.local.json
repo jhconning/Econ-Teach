@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(code \"notebooks/trade/hos.py\")"
+      "Bash(code \"notebooks/trade/hos.py\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(grep:*)",
+      "Bash(git status:*)"
     ]
   }
 }

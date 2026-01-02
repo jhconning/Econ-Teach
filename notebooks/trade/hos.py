@@ -575,16 +575,15 @@ def plot_closed_economy(alpha: float = alpha, beta: float = beta,
     ca_indif = indifference_curve(cm_range, theta, eq['utility'])
 
     fig, ax = plt.subplots(figsize=(8, 8))
-    ax.plot(Qm, Qa, 'k-', linewidth=2, label='PPF')
-    ax.plot(cm_range, ca_indif, 'b--', linewidth=2, label=f'U = {eq["utility"]:.1f}')
-    ax.scatter(eq['QM'], eq['QA'], s=150, c='red', zorder=5, label='Autarky equilibrium')
+    ax.plot(Qm, Qa, 'k-', linewidth=2)
+    ax.plot(cm_range, ca_indif, 'b--', linewidth=2)
+    ax.scatter(eq['QM'], eq['QA'], s=150, c='red', zorder=5)
 
     ax.set_ylim(0, 110)
     ax.set_xlim(0, 110)
     ax.set_xlabel(r'$Q_M$', fontsize=18)
     ax.set_ylabel(r'$Q_A$', fontsize=18)
     ax.set_title('Closed Economy Equilibrium')
-    ax.legend()
     ax.set_aspect('equal')
     plt.tight_layout()
 

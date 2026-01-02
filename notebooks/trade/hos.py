@@ -614,12 +614,12 @@ def plot_rybczynski(p: float, Kbar: float = Kbar, Lbar: float = Lbar,
     ax.spines['right'].set_visible(True)
 
     # Factor intensity rays
-    ax.plot(ll, eq['ka_ratio'] * ll, '--', label=f"K/L (A) = {eq['ka_ratio']:.2f}")
-    ax.plot(ll, eq['km_ratio'] * ll, '--', label=f"K/L (M) = {eq['km_ratio']:.2f}")
+    ax.plot(ll, eq['ka_ratio'] * ll, '--')
+    ax.plot(ll, eq['km_ratio'] * ll, '--')
 
     # Allocations
-    ax.scatter(eq['LA'], eq['KA'], s=150, c='blue', label='Sector A', zorder=5)
-    ax.scatter(eq['LM'], eq['KM'], s=150, c='green', label='Sector M', zorder=5)
+    ax.scatter(eq['LA'], eq['KA'], s=150, c='blue', zorder=5)
+    ax.scatter(eq['LM'], eq['KM'], s=150, c='green', zorder=5)
 
     # Extension lines from allocation points
     llm_up = np.linspace(eq['LA'], Lbar, 100)
@@ -639,7 +639,6 @@ def plot_rybczynski(p: float, Kbar: float = Kbar, Lbar: float = Lbar,
     ax.text(1.05 * Lbar, 0.95 * Kbar - 18,
             f'(QA, QM) = ({eq["QA"]:2.0f}, {eq["QM"]:2.0f})', fontsize=14)
 
-    ax.legend()
     ax.set_aspect('equal')
     plt.tight_layout()
 

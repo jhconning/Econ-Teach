@@ -2,8 +2,11 @@
 #Ipython Notebook
 .ipynb_checkpoints
 _build/
+_gsdata_/
+.claude/
 scratch/
 *.pyc
+modules/
 .vs/
 .vscode/
 

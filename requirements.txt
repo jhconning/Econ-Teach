@@ -1,9 +1,6 @@
-git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+jupyter-book
 numpy
 matplotlib
 ipywidgets
 scipy
 seaborn
-
-
-

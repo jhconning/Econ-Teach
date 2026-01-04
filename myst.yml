@@ -1,0 +1,17 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 6b7d814d-1c58-4c24-9bd5-d4ce1676a233
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/jhconning/Econ-Teach
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  options:
+    hide_branding: true
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

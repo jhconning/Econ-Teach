@@ -2,9 +2,7 @@
 
 ```{contents}
 :depth: 3
-```
-
-This Econ-Teach site was made using [JupyterBook](https://jupyterbook.org/intro.html) which, in turn, leverages the [Sphinx](https://www.sphinx-doc.org/en/master/) documentation system.  These tools take content written in jupyter notebook (`.ipynb` extension) and markdown text files (`.md` extension) to transform text, math input, and python code, into the nicely rendered HTML code of this website.  Some of the notebooks that embed code can then be run on a jupyter notebook server on the users' personal computer, or in the cloud, to make some of the visualizations and simulations interactive.
+This Econ-Teach site is now built using [MyST Markdown](https://mystmd.org/), a powerful ecosystem for authoring scientific and technical content in markdown. MyST enables you to write content in standard markdown, enhanced with directives and roles for equations, citations, figures, and more. The site is generated and published using [MyST tools](https://mystmd.org/guide/intro), which convert markdown and Jupyter notebooks (`.ipynb`) into a well-structured, interactive website. MyST builds on the work of [Executable Books](https://executablebooks.org/) and is designed for reproducible research, making it easy to share text, math, and code in a variety of output formats, including HTML and PDF.
 
 Some pages contain [geogebra applets](https://geogebra.org) that are immediately interactive in any modern browser.   Other pages which have been created as jupyter notebooks with embedded  python code will display as static pages but can be modified and made interactive by running the the jupyter notebook on a server.  This can be accomplished by clicking the Binder or Google Colab button at the top of the page, or by cloning the [Econ-Teach github repository](https://github.com/jhconning/Econ-Teach) to your local computer and then running them on a local jupyter notebook server.  Here is one [guide](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to getting started. 
 

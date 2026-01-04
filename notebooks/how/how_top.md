@@ -2,6 +2,8 @@
 
 ```{contents}
 :depth: 3
+```
+
 This Econ-Teach site is now built using [MyST Markdown](https://mystmd.org/), a powerful ecosystem for authoring scientific and technical content in markdown. MyST enables you to write content in standard markdown, enhanced with directives and roles for equations, citations, figures, and more. The site is generated and published using [MyST tools](https://mystmd.org/guide/intro), which convert markdown and Jupyter notebooks (`.ipynb`) into a well-structured, interactive website. MyST builds on the work of [Executable Books](https://executablebooks.org/) and is designed for reproducible research, making it easy to share text, math, and code in a variety of output formats, including HTML and PDF.
 
 Some pages contain [geogebra applets](https://geogebra.org) that are immediately interactive in any modern browser.   Other pages which have been created as jupyter notebooks with embedded  python code will display as static pages but can be modified and made interactive by running the the jupyter notebook on a server.  This can be accomplished by clicking the Binder or Google Colab button at the top of the page, or by cloning the [Econ-Teach github repository](https://github.com/jhconning/Econ-Teach) to your local computer and then running them on a local jupyter notebook server.  Here is one [guide](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to getting started. 
@@ -34,7 +36,7 @@ Then jupyterbook will build a local HTML website which you can view from a brows
 
 In order to build and share a website that can be reached from anywhere on the internet I use the free github pages servive. 
 
-I've [setup a github action](https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions) so that any new push of new content to the Github repository at [github.com/jhconning/Econ-Teach](https://github.com/jhconning/Econ-Teach) will trigger the creation of a virtual cloud machine that will then produce the jupyterbook site using the build process just described such that the rendered site then displays at [jhconning.github.io/Econ-Teach](https://jhconning.github.io/Econ-Teach).  It's a neat process and it's fun to see github actions do all this work for you.  There may be a few minutes delay between a new build and the changes appearing on the site.[^1]
+I've [setup a github action](https://mystmd.org/guide/deployment-github-pages) so that any new push of new content to the Github repository at [github.com/jhconning/Econ-Teach](https://github.com/jhconning/Econ-Teach) will trigger the creation of a virtual cloud machine that will then produce the jupyterbook site using the build process just described such that the rendered site then displays at [jhconning.github.io/Econ-Teach](https://jhconning.github.io/Econ-Teach).  It's a neat process and it's fun to see github actions do all this work for you.  There may be a few minutes delay between a new build and the changes appearing on the site.[^1]
 
 ## Workflow
 

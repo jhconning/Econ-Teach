@@ -1,10 +1,10 @@
-# This JupyterBook
+# MyST built this site
 
 ```{contents}
 :depth: 3
 ```
 
-This Econ-Teach site is now built using [MyST Markdown](https://mystmd.org/), a powerful ecosystem for authoring scientific and technical content in markdown. MyST enables you to write content in standard markdown, enhanced with directives and roles for equations, citations, figures, and more. The site is generated and published using [MyST tools](https://mystmd.org/guide/intro), which convert markdown and Jupyter notebooks (`.ipynb`) into a well-structured, interactive website. MyST builds on the work of [Executable Books](https://executablebooks.org/) and is designed for reproducible research, making it easy to share text, math, and code in a variety of output formats, including HTML and PDF.
+This Econ-Teach site is now built using [MyST Markdown](https://mystmd.org/), a powerful ecosystem for authoring scientific and technical content in markdown. MyST enables you to write content in standard markdown, enhanced with directives and roles for equations, citations, figures, and more. The site is generated and published using [MyST tools](https://mystmd.org/guide/intro), which convert markdown and Jupyter notebooks (`.ipynb`) into a well-structured, interactive website.  Each time new content is pushed to the github site, a github action rebuilds the rendered website. MyST builds on the work of [Executable Books](https://executablebooks.org/) and is designed for reproducible research, making it easy to share text, math, and code in a variety of output formats, including HTML and PDF.
 
 Some pages contain [geogebra applets](https://geogebra.org) that are immediately interactive in any modern browser.   Other pages which have been created as jupyter notebooks with embedded  python code will display as static pages but can be modified and made interactive by running the the jupyter notebook on a server.  This can be accomplished by clicking the Binder or Google Colab button at the top of the page, or by cloning the [Econ-Teach github repository](https://github.com/jhconning/Econ-Teach) to your local computer and then running them on a local jupyter notebook server.  Here is one [guide](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) to getting started. 
 
@@ -17,19 +17,35 @@ The aim is to create content using easy human-readable [markdown](https://www.ma
 
 [Jupyter notebooks](https://jupyter.org/) already accomplish much of this goal by themselves by providing a 'front end' for mixing text, math and code.  Jupyter notebooks that are posted to sites such as github are automatically rendered by those sites in human readable form (see, for example, [Edgeworth.ipynb](https://github.com/jhconning/Econ-Teach/blob/master/notebooks/trade/Edgeworth.ipynb)).  This however allows one to only display one notebook at a time and for a larger project one would want to organize several notebooks and markdown files into a clearly navigable book or website.
  
-Jupyterbook was created for this purpose as part of [The Executable Book Project](https://executablebooks.org/en/latest/).  Many Executable Books and Courses are being written using Jupyterbook. See the [Gallery of Jupyter Books](https://executablebooks.org/en/latest/gallery.html).  Some of the peopl behind the [Quantecon](https://quantecon.org/) project were important to the development of Jupyter Book.
+Some of the people behind the fantastic [Quantecon](https://quantecon.org/) project were important to the development of MyST markdown (and the earlier [Jupyter Book](https://jupyterbook.org/)).
 
-Jupyterbook extends the simple markdown syntax typically used for jupyter notebooks by adding extra [MyST Markdown](https://jupyterbook.org/content/myst.html) 'directives' and 'roles' to allow us several 'book writing' tasks including adding bibliographic citations and bibliographies, numberering equations, adding cross-references, creating tabs and dropdowns, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, hiding code, etc.
+[MyST Markdown](https://jupyterbook.org/content/myst.html) extends the simple markdown syntax typically used for jupyter notebooks by adding 'directives' and 'roles' to allow several 'book writing' tasks including adding bibliographic citations and bibliographies, numberering equations, adding cross-references, creating tabs and dropdowns, etc. MyST also gives us more fine control over things such as image size and positioning on a page, figure captioning, hiding code, etc.
 
 ## Setup and Build
+To set up and build the site using the MyST workflow, first ensure you have [MyST CLI](https://mystmd.org/guide/intro) installed. 
 
-See installation instructions on the [jupyter book](https://jupyterbook.org/) page.  We need a `_config.yml` with basic configuration settings and a `_toc.yml` file that establishes which files will be included in the navigation structure that you'll to the left of the site.
 
-Suppose you have [cloned](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the [Econ-Teach](https://github.com/jhconning/Econ-Teach)repository that builds this site to a folder on your machine labeled `Econ-Teach` and have already installed jupyterbook.  If you then open up an Anaconda command terminal on your machine and navigate to that folder, you can then type
+Once installed, navigate to your project directory (e.g., `Econ-Teach`) in your terminal. To build the site locally, run:
 
-`jb build .`
+```bash
+myst build .
+```
 
-Then jupyterbook will build a local HTML website which you can view from a browser (at the end of the build process it will tell you how to open it).  
+This command utilizes configuration instructions from both `myst.yml` and `_toc.yml` files.
+- `myst.yml` provides project-wide settings for MyST Markdown parsing and Sphinx integration.
+- `_toc.yml` defines the structure and order of the table of contents for the documentation build.
+By referencing these files, the command ensures that documentation is built and organized according to the specified configurations and content hierarchy.
+
+
+This command will generate the static site in the `_build/html` directory. You can preview the site locally by running:
+
+```bash
+myst preview
+```
+
+This will start a local server and provide a link to view your site in your browser. The MyST workflow supports both markdown (`.md`) and Jupyter notebook (`.ipynb`) files, allowing you to mix narrative content and executable code seamlessly. For more details on configuration and advanced options, see the [MyST documentation](https://mystmd.org/guide/).
+
+See installation instructions on the [MyST markdown site](https://mystmd.org/guide/).
 
 
 ## Github Actions and webpage

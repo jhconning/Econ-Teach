@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 6b7d814d-1c58-4c24-9bd5-d4ce1676a233
-  title: Notebooks for Teaching Economics
+  title: Teaching Economics
   jupyter: true
   # description:
   # keywords: []
@@ -15,6 +15,7 @@ site:
     hide_branding: true
     binder: https://mybinder.org/v2/gh/jhconning/Econ-Teach/master
     colab: https://colab.research.google.com/github/jhconning/Econ-Teach/blob/master
+    logo_text: "Economics Notebooks"
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png

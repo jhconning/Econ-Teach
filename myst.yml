@@ -9,6 +9,8 @@ project:
   # authors: []
   github: https://github.com/jhconning/Econ-Teach
   # To autogenerate a Table of Contents, run "myst init --write-toc"
+  exclude:
+    - notebooks/draft/**
 site:
   template: book-theme
   options:

@@ -4,6 +4,7 @@ parts:
 - caption: Micro Theory
   chapters:
   - file: notebooks/micro/01_Constrained_Optimization
+  - file: notebooks/micro/ces
   - file: notebooks/trade/Edgeworth
 - caption: Trade
   chapters:
